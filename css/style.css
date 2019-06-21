@@ -1,0 +1,94 @@
+html{
+    font-size: 1rem !important;
+}
+
+@media (max-width:576px) {
+
+    html {font-size: 1.0rem !important;
+    }
+
+}
+
+@media (min-width:768px) {
+    html {
+    font-size: 1.2rem !important;
+    }
+}
+
+@media (min-width:992px) {
+    html {
+    font-size: 1.4rem !important;
+    }
+}
+
+@media (min-width:1200px) {
+    html {
+    font-size: 1.6rem !important;
+    }
+}
+
+article {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+}
+p {
+    font-family: 'Open Sans', sans-serif !important;
+}
+ body {
+     background: black !important;
+     font-family: 'Ubuntu', sans-serif !important;
+
+ }
+
+ nav a {
+     color:rgb(100, 100, 100);
+     background:rgba(0, 0, 0, 0.274);
+     font-size: 1em;
+ }
+
+h1 {
+    color:rgba(255, 255, 255, 0.856);
+    font-size: 2rem;
+    
+}
+header {
+    color:rgb(138, 136, 136);
+    margin-top:20px;
+    margin-bottom: 20px;
+
+}
+
+header h1 {
+    letter-spacing: 1.25rem;
+    color:rgb(192, 192, 192);}
+
+
+footer a {
+    color:rgb(100, 100, 100);
+    background:rgba(0, 0, 0, 0.274);
+    margin: 1em;
+
+}
+footer{
+    color:rgba(255, 255, 255, 0.856);
+
+}
+footer p {
+    padding-top: 1.25em;
+    font-size: .66em;
+}
+a:hover{
+    color:rgb(218, 216, 216) !important;
+    text-decoration: none;
+}
+
+.vl {
+    border-left: thick solid white;
+
+}
+
+a:hover{
+    color:rgb(218, 216, 216) !important;
+    text-decoration: none;
+}
