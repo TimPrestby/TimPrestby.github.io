@@ -115,8 +115,55 @@ div.portfolio-grid img {
     object-fit: cover;
     display: block;
     box-shadow: 3px 3px 3px #aaa;
+    vertical-align: middle;
 }
 
+.cover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(85, 85, 85, 0.8);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: .7s ease;
+    display: table;
+}
+
+.cover-container{
+    display: table-cell;
+    vertical-align: middle;
+
+}
+
+.cover-text {
+    position: relative;
+    padding-left: 1vw;
+    font-size: 4vw;
+    color: #ededed;
+    text-align: center;
+    border-bottom-style: double;
+    border-color: white;
+    line-height: 1em;
+
+    
+    
+}
+
+.info-text{
+    position: relative;
+    padding-left: 1vw;
+    font-size: 2.5vw;
+    color: #ededed;
+    text-align: center;
+
+}
+
+.cover-hover:hover .cover{
+    opacity: 1;
+}
 
 /*//////////////// Link Styles ////////////////*/
 
