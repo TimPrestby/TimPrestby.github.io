@@ -1,0 +1,823 @@
+/*Stylesheet by Timothy Prestby and Joe Marks 2019*/
+html, body {
+    background-color: #414142;
+    margin: auto;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/*//////////////Stylize intro page///////////////////*/
+/*///////////////////////////////////////////////////*/
+
+#intropage {
+    background-image: url(../images/HeaderImage.jpg);
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding-bottom: 40vh;
+    color: #008080;
+    height: 60vh;
+    width: 100vw;
+    overflow: hidden;
+    z-index: 100000000000000;
+    margin: 0;
+    position: absolute;
+}
+
+#intropage h1 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 4em;
+    text-shadow: 3px 3px 3px black;
+}
+
+#intropage h2{
+    font-size: 2em;
+    text-shadow: 2px 2px 2px black;
+    font-family: 'Rubik', sans-serif;
+    margin-bottom: 1vh;
+}
+
+#intropage h3{
+    font-size: 1.75em;
+    color: white;
+    text-shadow: 2px 2px 2px #008080;
+    font-family: 'Sanchez', serif;
+}
+
+#intropage h4{
+    font-size: 6em;
+    text-shadow: 2px 2px 2px black;
+    font-family: 'Rubik', sans-serif;
+    margin-bottom: 1vh;
+}
+
+#intropage p{
+    font-size: 1.25em;
+    color: white;
+    text-shadow: 2px 2px 2px #008080;
+    font-family: 'Sanchez', serif;
+}
+
+#source{
+font-size: .9em !important;
+}
+
+#container{
+    overflow:hidden;
+    top:0;
+    left: 0;
+    right: 0;
+    width:100%;
+    height:100%;
+}
+
+#left{
+    float: left;
+    padding-left: 2.5vw;
+    padding-bottom: 5vh;
+}
+
+#right{
+    float:right;
+    padding-top: 25vh;
+    padding-right: 2.5vw;
+}
+
+#clear{
+    float:left;
+    padding-top: 15vh;
+}
+
+#arrows{
+    float:left;
+    padding-top: 40vh;
+    padding-left: 4.4vw;
+    display: inline-block;
+    /*left: 60%;
+    bottom: 0%;*/
+    font-size: .5em;
+    /*transform: translate(-25%, 0%);*/
+}
+
+/*//////////////Stylize InfoPanel ///////////////////*/
+/*///////////////////////////////////////////////////*/
+#bold{
+    font-size: 1.1em !important;
+    color: #008080;
+    font-style: italic;
+    text-shadow: 1px 1px 1px black;
+}
+
+section div img {
+    margin-top:20px;
+}
+
+section div p {
+    margin-top:20px;
+    font-size:1.25em;
+    text-indent: 2em;
+}
+
+
+img { 
+  width: 100%; 
+  height: auto;  
+}
+
+#wrapper {
+  position:absolute;
+  height:100%;
+  width:100%;
+}
+
+a {
+    color: #008080;
+    font-style: italic;
+    text-decoration-line: none;
+    text-shadow: 1px 1px 1px black;
+
+}
+a:hover{
+    color: white;
+    text-decoration-line: none;
+
+
+}
+
+article.container {
+  background: #414142;
+  color: #f7f5f5;
+  opacity: 0.9;
+  width: 22vw;
+  max-width: 600px;
+  float: left;
+  overflow-x: hidden !important;
+}
+
+.article_paragraph {
+  max-width: 600px;
+  margin: 18px auto;
+}
+
+.center{
+    text-align: center;
+}
+
+#date{
+    font-size:2.25em;
+    color: #008080; 
+    text-align: center;
+    text-shadow: 2px 2px 2px black;
+    margin-bottom: 0;
+}
+
+#title{
+    color: #008080;
+    text-align: center;
+    font-size: 2em;
+    text-shadow: 2px 2px 2px black;
+    margin-bottom: 0;
+    margin-top: 10px;
+
+
+
+}
+
+.event{
+    display: inline-block;
+    height: 100vh;
+    padding-right: 0vw;
+}
+
+#info-pane{
+    height: 100vh;
+    width: 20%;
+    max-width: 450px;
+    margin-left: 1vw;
+    display: inline-block;
+    float: left;
+    background-color: #414142;
+}
+
+#dates-container{
+    height: 100vh;
+    width: 2.59vw; 
+    display: inline-block;
+    position: relative;
+    text-align: right;
+    z-index: 9000;
+    color: #d8d8d8;
+    overflow-x: hidden;
+}
+
+#filler{
+    height:65vh;
+}
+
+/*//////////////Stylize Events ///////////////////*/
+/*///////////////////////////////////////////////////*/
+
+
+#date-1776-{
+    top: 1.0vh;
+}
+
+#date-1787-{
+    top: 9.2vh;
+}
+
+#date-1791-{
+    top: 12.2vh;
+}
+
+#date-1803-{
+    top: 21.2vh;
+}
+
+#date-1814-{
+    top: 29.3vh;
+}
+
+#date-1819-{
+    top: 33.0vh;
+}
+
+#date-1830-{
+    top: 41.2vh;
+}
+
+#date-1848-{
+    top: 54.6vh;
+}
+
+#date-1851-{
+    top: 56.8vh;
+}
+
+#date-1871-{
+    top: 71.6vh;
+}
+
+#date-1876-{
+    top: 75.3vh;
+}
+
+#date-1887-{
+    top: 83.5vh;
+}
+
+#date-1897-{
+    top: 90.9vh;
+}
+
+#date-1906-{
+    top: 97.6vh;
+}
+
+.timelineEntries {
+    margin: 0;
+    position: fixed;
+    right: 71.32vw;
+    z-index: 9001;
+    cursor: pointer;
+}
+
+.timelinePointers {
+    display: inline;
+    font-size: 1em;
+    text-shadow: -3px 0px 3px white, 0px 1px 2px white, 3px 0px 3px white, 0px -1px 2px white;
+}
+.timelineDates {
+    float: left;
+    display: inline;
+    font-weight: bold;
+}
+
+ul li{
+    list-style-type: square;
+}
+
+li a{
+    color:white;
+
+}
+
+li a:hover{
+    text-decoration-line: underline
+}
+
+.subtitle{
+    color: #008080;
+    text-shadow: 1px 1px 1px black;
+}
+
+sup{
+    font-size: .75em;
+}
+/*//////////////Stylize Disclaimer ///////////////////*/
+/*///////////////////////////////////////////////////*/
+
+#disclaimerLink{
+    display: inline-block;
+    color:white;
+    cursor: pointer;
+}
+
+#disclaimer{
+    display: block;
+    /*height: 26vh;
+    width: 35vw;*/
+    top: 35vh;
+    left: 32.5vw;
+    z-index: 9005;
+    position: fixed;
+    text-align: center;
+    background-color: #414142;
+    border-radius: 25px;
+    font-family: sans-serif;   
+    color: #008080;
+    text-shadow: 2px 2px 2px black;
+}
+
+#disclaimerContent{
+    color:  #d8d8d8;
+    padding: 0px 12px 5px 12px;
+}
+
+#xOut{
+    float: right;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 2em;
+    padding-right: 1vw;
+    padding-top: 0.4vh;
+    cursor: pointer;
+    color: black;
+    text-shadow: none;
+}
+
+#disclaimerBackground{
+    height: 100vh;
+    width: 100vw;
+    display: block;
+    position: fixed;
+    background-color: #000;
+    opacity: 0.7;
+    z-index: 9004;
+}
+
+
+/*//////////////Stylize Leaflet Objects ///////////////////*/
+/*///////////////////////////////////////////////////*/
+
+.leaflet-verticalcenter {
+    position: absolute;
+    z-index: 1000;
+    pointer-events: none;
+    top: 50%; /* possible because the placeholder's parent is the map */
+    transform: translate(-23%, -50%); /* using the CSS3 Transform technique */
+    padding-top: 1.031991744vh;
+}
+
+.leaflet-verticalcenter .leaflet-control {
+    margin-bottom: 1.031991744vh;
+}
+
+#timelineSlider{
+    padding-left: 0px;
+    margin-bottom: 10.31991744vh; 
+}
+
+#map{
+    height: 100vh;
+    width: 71.99vw;
+    right: 0px;
+    display: inline-block;
+    float: right;
+    position: fixed;
+    top: 0px;
+    z-index: -99;
+}
+
+.leaflet-tile{
+    border: 0px;
+}
+
+.leaflet-top{
+    margin-left: 50px;
+}
+
+.leaflet-slider-container {
+    height: 96vh !important;
+    margin-bottom: 4.127966976vh !important;
+}
+.leaflet-slider{
+    max-width: 99vh !important;
+    min-width: 99vh !important;
+
+
+}
+
+/*Format Popup*/
+.leaflet-popup-content p{
+    margin: 0.2em 0;
+    max-width: 200px;
+    max-height: 200px;
+    font-family: 'Rubik', sans-serif;
+}
+
+a.leaflet-popup-close-button {
+    color:white !important;
+    text-shadow: none !important;
+}
+.leaflet-popup{ pointer-events: none; }
+
+.leaflet-container .leaflet-control-attribution{
+        background: rgba(255, 255, 255, 0.0) !important;
+        color:white !important;
+}
+.leaflet-container .leaflet-control-attribution a{
+    color:white;
+}
+
+/*//////////////Stylize Legend ///////////////////*/
+/*///////////////////////////////////////////////////*/
+
+.legend-control-container {
+    color: rgb(85, 85, 85);
+    background: white;
+    border-radius: 15px;
+    text-align: center;
+    width: 200px;
+    font-family: 'Sanchez', serif;
+    font-size: 1.25em;
+}
+
+.attribute-legend p{
+    color: black !important;
+    margin: 0;
+    font-family: 'Sanchez', serif;
+    margin-bottom:0;
+}
+
+#legend-title{
+    margin-bottom: 10px !important;
+    font-size: .9em;
+}
+
+#small{
+    width:50%;
+}
+
+/*//////////////Stylize Selection List ///////////////////*/
+/*///////////////////////////////////////////////////*/
+.selection-list .selection-list-title{
+    color: #f7f5f5;
+    text-align: left;
+    padding: 3px 7px 0px 7px;
+    font-weight: bold;
+    font-size: 1.2em;
+    
+}
+
+.selection-list {
+    max-height: 30vh;
+    max-width: 20vw;
+    /*padding: 3px 7px 3px 7px;*/
+    overflow: auto;
+    background-color: #414142;
+    border-radius: 5px;
+    
+}
+
+.selected-item {
+    color : #f7f5f5;
+    padding: 0px 7px 3px 7px;
+}
+
+.selected-item .selection-content{
+    display: inline-block;
+    float: left;
+    width: 92%;
+    text-align: right;
+}
+
+.selected-item .selection-content:hover{
+    display: inline-block;
+    float: left;
+    width: 92%;
+    text-align: right;
+    text-decoration: underline;
+}
+
+.selected-item .selection-x{
+    display: inline-block;
+    float: right;
+    width: 4%;
+    padding-left: 2px;
+}
+
+.selected-item.clickable {
+    cursor: pointer;
+}
+
+/*//////////////Stylize Spinner Div ///////////////////*/
+/*///////////////////////////////////////////////////*/
+
+#spinnerDiv {
+    height: 100%;
+    width: 100%;
+    z-index: 9006;
+    position: fixed;
+    background-color: #000;
+    opacity: 0.7;
+}
+/*//////////////Stylize For Smaller desktop/Laptop ///////////////////*/
+/*///////////////////////////////////////////////////*/
+
+@media only screen and (max-width: 1400px) and (min-width:1200px) {
+    #intropage h3  {
+    font-size: .9em;
+    }
+
+    #intropage p  {
+        font-size: .9em;
+        }
+
+    #source {
+        font-size:.8em;
+    }
+}
+
+/*//////////////Stylize For Tablets ///////////////////*/
+/*///////////////////////////////////////////////////*/
+
+@media only screen and (max-width: 1200px) and (min-width:600px) {
+    article.container {
+        background: #414142;
+        color: #f7f5f5;
+        opacity: 0.9;
+        width:30vw;
+        float: left;
+        overflow-x: hidden !important;
+      }
+
+      #info-pane{
+        height: 100vh;
+        width: 30%;
+        max-width: 600px;
+        margin-left: 1vw;
+        display: inline-block;
+        float: left;
+        background-color: #414142;
+    }
+
+    .article_paragraph {
+        max-width: 200px;
+        margin: 18px auto;
+      }
+    
+    body{
+        font-size: .9em !important;
+    }
+
+    #map{
+        height: 100vh;
+        width: 63.1vw;
+        right: 0px;
+        display: inline-block;
+        float: right;
+        position: fixed;
+        top: 0px;
+        z-index: -99;
+    }
+
+    .timelineEntries {
+        margin: 0;
+        position: fixed;
+        right: 61.5vw;
+        z-index: 9001;
+        cursor: pointer;
+    }
+
+    #intropage{
+        margin: 0 auto;
+    }
+
+    #intropage h2{
+        margin-bottom:80px;
+
+    }
+
+    #intropage h3  {
+        font-size: .9em;
+        text-align: center !important;
+    }
+
+    #right{
+        clear:both;
+        text-align: center !important;
+        float: none;
+        padding:0;
+        margin-bottom:80px;
+    }
+
+    #left{
+        clear:both;
+        text-align:center !important;
+        float:none;
+        padding: 0;
+        margin-bottom:80px;
+    }
+
+    #disclaimer{
+        left:12.5vw;
+    }
+
+    #clear{
+        text-align: center !important;
+        float: none;
+        padding:0;
+    }
+
+    #intropage p  {
+        font-size: .9em;
+        }
+
+    #source {
+        font-size:.8em;
+    }
+    
+
+}
+
+@media only screen and (max-width: 600px)  {
+    .leaflet-slider-container {
+        height: .1vh !important;
+        margin-bottom: 0px !important;
+        width: 100vw;
+        background-color: rgba(245, 222, 179, 0) !important;
+
+    }
+
+    .leaflet-control-slider input.leaflet-slider{
+        background-color: rgba(245, 222, 179, 0) !important;
+    }
+
+    .leaflet-left .leaflet-control{
+        margin-left: 0 !important;
+    }
+
+    .leaflet-control-slider{
+        height:30px;
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0) !important;
+        background: rgba(0, 0, 0, 0) !important;
+    }
+
+    .leaflet-bottom .leaflet-control {
+        margin-bottom: 0px !important;
+    }
+    .leaflet-slider{
+        max-width: 95vw !important;
+        min-width: 95vw !important;
+    
+    
+    }
+
+    article.container {
+        margin-top: 200px;
+        background: none;
+        width: 90%;
+        opacity: 0.9;
+        float: none;
+        margin: auto;
+      }
+
+    #map{
+        height: 66.66%;
+        width: 100%;
+        z-index: 0;
+
+    }
+
+    #info-pane{
+    width:100%;
+    bottom: 0px;
+    margin: auto;
+    }
+
+    #intropage h1{
+    font-size: 3em;
+    }
+
+    #intropage h2{
+    font-size: 1.5em;
+    }
+
+    #intropage h3  {
+        font-size: 1.3em;
+        text-align: center !important;
+    }
+
+    
+    #right{
+        clear:both;
+        text-align: center !important;
+        float: none;
+        padding:0;
+        margin-bottom:20px;
+        font-size: .75em;
+    }
+
+    #left{
+        clear:both;
+        text-align:center !important;
+        float:none;
+        padding: 0;
+        margin-bottom:20px;
+        font-size: .75em;
+
+    }
+
+    #clear{
+        padding-top: 0;
+        font-size: .75em;
+
+    }
+
+    #disclaimer{
+        font-size:.75em;
+        left:2vw;
+        right: 2vw;
+    }
+
+    article.container{
+        font-size: .75em;
+
+        
+    }
+
+    .legend-control-container{
+        height: 50%;
+        width:50%;
+        font-size: .8em;
+    }
+
+    #timelineSlider{
+        margin-bottom:0;
+    }
+
+}
+
+@media only screen and (max-width: 400px)  {
+    
+    #intropage h1{
+    font-size: 1.4em;
+    text-shadow: 2px 2px 2px black;
+    }
+
+    #intropage h2{
+    font-size: 1em;
+    text-shadow: 3px 3px 3px black;
+    padding-bottom: 10px;
+    }
+
+    #intropage h3  {
+        font-size: 1em;
+        text-align: center !important;
+    }
+
+    
+    #right{
+        clear:both;
+        text-align: center !important;
+        float: none;
+        padding:0;
+        margin-bottom:0px;
+        font-size: .70em;
+    }
+
+    #left{
+        clear:both;
+        text-align:center !important;
+        float:none;
+        padding: 0;
+        margin-bottom:0px;
+        font-size: .70em;
+
+    }
+
+    #clear{
+        padding-top: 0;
+        font-size: .70em;
+
+    }
+    
+    #arrows{
+        z-index:1000;
+        position: fixed;
+    }
+
+}

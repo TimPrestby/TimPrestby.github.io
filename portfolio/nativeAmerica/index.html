@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <title> </title>
+
+        <!--Supplementary Style Sheets-->
+        <link href="https://fonts.googleapis.com/css?family=Rubik|Sanchez" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="lib/leaflet.css">
+        <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+        <script type="text/javascript" src="lib/leaflet-src.js"></script>
+        <script type="text/javascript" src="lib/leaflet-slider.js"></script>
+        <link rel="stylesheet" href="css/leaflet-slider.css">
+        <!-- Add fuse search -->
+        <script type="text/javascript" src="lib/fuse.js"></script>
+        <script type="text/javascript" src="lib/leaflet.fusesearch.js"></script>
+        <link rel="stylesheet" href="css/leaflet.fusesearch.css">
+        <!-- End fuse search -->
+        <!-- Add spin control -->
+        <!--<script type="text/javascript" src="lib/spin.js"></script>-->
+        <link rel="stylesheet" href="css/spin.css">
+        <!--<script type="text/javascript" src="lib/leaflet.spin.js"></script>-->
+        <!-- End spin control -->
+        <script src="lib/leaflet-providers.js"></script>
+        <!--<script src="lib/require.js"></script>
+        <script src="lib/scrollMonitor.js"></script>
+        <script src="lib/scroll-monitor.js"></script>-->
+        <script src="https://unpkg.com/leaflet-responsive-popup@0.6.3/leaflet.responsive.popup.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet-responsive-popup@0.6.3/leaflet.responsive.popup.css" />
+<!--Mobile selector-->
+      
+        <!--[if IE<9]>
+            <link rel="stylesheet" href="css/style.ie.css">
+        <![endif]-->
+
+    </head>
+
+    <body>
+        
+        <div id = 'spinnerDiv'></div>
+        
+        <div id = 'disclaimerBackground'></div>
+        <div id = 'disclaimer'>
+            <div id = xOut>&times;</div>
+            <h1>Disclaimer</h1>
+            <div id = 'disclaimerContent'>
+                This map is for visualization purposes only.  <br><br>
+                This map should not be used in a court of law to represent tribal boundaries.  <br><br>
+                Only Native American lands within the contiguous U.S. were included in this map.  <br><br>
+                This map is not an equal area projection.  <br><br>
+                All images and quotations subject to copyright.  <br><br>
+            
+            </div>
+        
+        
+        </div>
+        
+      <div id='container'>
+        <div id='intropage'>
+          <h1>Remembering Native America</h1>
+          <h2>A History of Lies, Suffering, and Conquest</h2>
+          
+          <div id="left">
+            <h3>1707</h3>
+            <p>
+             “The <b id='bold'>thinning of Indians</b> by disease to the “hand of God [is] eminently seen.”      
+            </p>
+            <p id='source'>
+              -Governor of North Carolina
+              <i>(National Humanities Center) <sup>1</sup>
+            </i></p><br>
+      
+          </div>
+
+          <div id='right'>
+            <h3>1722</h3>
+
+            <p>
+              “Acquiring Indian land for little to no
+              payment is <b id='bold'>just</b>. <br>The Indians made no use of it, but for Hunting.” 
+            </p>
+            <p id='source'>
+                -Boston Puritan Minister Rev. Samuel Stoddard
+              <i>(National Humanities Center) <sup>1</sup>
+            </i></p><br>
+        
+          </div>
+
+          <div id="clear">
+            <h3 >1739</h3>
+            <p>
+              “By driving out and killing the Indians as punishment for their sins,<br> 
+              God was pleased to make ready a place as an Asylum for New England settlers.”
+            </p>
+            <p id='source'>
+              -Baptist minister in Rhode Island <i>(National Humanities Center) <sup>1</sup>
+            </i></p><br>
+        
+          </div>
+            
+          <div id="arrows">
+              <h4>↓  ↓  ↓</h4><br>
+          </div>
+           
+
+
+
+        </div>
+
+      </div>
+        <div id = 'wrapper'>
+            <div id = 'dates-container'>
+              <div id = 'date-1776-' class = 'timelineEntries'> 
+                  <pre class = 'timelinePointers'> -</pre>
+                <div id = 'date-1776' class = 'timelineDates'>1776</div>
+              </div>
+              <div id = 'date-1787-' class = 'timelineEntries'> 
+                  <pre class = 'timelinePointers'> -</pre>
+                <div id = 'date-1787' class = 'timelineDates'>1787</div>
+              </div>
+              <div id = 'date-1791-' class = 'timelineEntries'> 
+                  <pre class = 'timelinePointers'> -</pre>
+                <div id = 'date-1791' class = 'timelineDates'>1791</div>
+              </div>
+              <div id = 'date-1803-' class = 'timelineEntries'> 
+                  <pre class = 'timelinePointers'> -</pre>
+                <div id = 'date-1803' class = 'timelineDates'>1803</div>
+              </div>
+              <div id = 'date-1814-' class = 'timelineEntries'> 
+                  <pre class = 'timelinePointers'> -</pre>
+                <div id = 'date-1814' class = 'timelineDates'>1814</div>
+              </div>
+              <div id = 'date-1819-' class = 'timelineEntries'> 
+                  <pre class = 'timelinePointers'> -</pre>
+                <div id = 'date-1819' class = 'timelineDates'>1819</div>
+              </div>
+              <div id = 'date-1830-' class = 'timelineEntries'> 
+                  <pre class = 'timelinePointers'> -</pre>
+                <div id = 'date-1830' class = 'timelineDates'>1830</div>
+              </div>
+              <div id = 'date-1848-' class = 'timelineEntries'> 
+                  <pre class = 'timelinePointers'> -</pre>
+                <div id = 'date-1848' class = 'timelineDates'>1848</div>
+              </div>
+              <div id = 'date-1851-' class = 'timelineEntries'> 
+                    <pre class = 'timelinePointers'> -</pre>
+                    <div id = 'date-1851' class = 'timelineDates'>1851</div>
+              </div>
+              <div id = 'date-1871-' class = 'timelineEntries'> 
+                    <pre class = 'timelinePointers'> -</pre>
+                    <div id = 'date-1871' class = 'timelineDates'>1871</div>
+              </div>
+              <div id = 'date-1876-' class = 'timelineEntries'> 
+                  <pre class = 'timelinePointers'> -</pre>
+                <div id = 'date-1876' class = 'timelineDates'>1876</div>
+              </div>
+              <div id = 'date-1887-' class = 'timelineEntries'> 
+                  <pre class = 'timelinePointers'> -</pre>
+                <div id = 'date-1887' class = 'timelineDates'>1887</div>
+              </div>
+              <div id = 'date-1897-' class = 'timelineEntries'> 
+                  <pre class = 'timelinePointers'> -</pre>
+                <div id = 'date-1897' class = 'timelineDates'>1897</div>
+              </div>
+              <div id = 'date-1906-' class = 'timelineEntries'> 
+                  <pre class = 'timelinePointers'> -</pre>
+                <div id = 'date-1906' class = 'timelineDates'>Today</div>
+              </div>
+
+            
+            </div>    
+            <div id = 'info-pane'>
+             
+
+                <article class="container">
+                <!-- Words and such -->
+
+                    <section>
+
+                    <!--Intro-->
+                            
+
+                    <div id = 'filler'>
+                    
+                      
+                    </div>
+                        
+                        
+                    <div id = 'intro' class = 'event'>
+                          <h1 id='date'>Introduction</h1>
+                          <p>
+                              “When European settlers arrived at the end of the fifteenth century, they encountered diverse Native American cultures—as many as 900,000 inhabitants with over 300 different languages. These people were virtually destroyed by the subsequent immigration that created the United States. <b id='bold'>This tragedy is the direct result of treaties, written and broken by foreign governments, of warfare, and of forced assimilation</b>.
+                          </p>
+                          <p>
+                            Today, people see the policies of the past with 21st century eyes. One might wonder how the nation's indigenous population became 'inferior' cultures in their own land, or how a nation could have committed such atrocities in the name of 'progress'.”
+                          </p>
+                          <p><i>
+                            - Library of Congress <sup>2</sup>
+                          </i></p>
+                          <br><br>
+                          <h2 id='title'>How to Use this Map</h2>
+                          <p> 
+                              <b id='bold'>SCROLL</b> to read along as the map changes, or <b id='bold'>CLICK</b> on the timeline or on a date to see the map in that year.
+                          </p>
+                          <p>
+                              Know the name of a tribe or nation? <b id='bold'>SEARCH</b> its name in the box, select as many as you want, and see it on the map. Nothing highlighted? Try moving the timeline!
+                          </p>
+                          <p>
+                              <b id='bold'>DOUBLE CLICK</b> on any territory to see a cession document or tribal information.
+                          </p>
+                          
+                    </div>
+                        
+                    <div id = '1776' class = 'event'>
+                          <h1 id='date'>1776</h1>
+                          <h2 id='title'>American Independence</h2>
+                          <img src="images/AmericanIndependence.jpg" alt="Declaration of Independence">
+                          <p><i>
+                            <a href='https://www.washingtontimes.com/news/2018/jul/4/facebook-flags-declaration-independence-hate-speec/'>-Washington Times</a>
+                          </i></p>
+                          <p>
+                            “The Declaration of Independence accused King George III of unleashing 'Merciless Indian Savages' against innocent men, women, and children. The image of ferocious warriors propelled into action by a tyrannical monarch fixed in memory and imagination the Indians' role in the Revolution and justified their subsequent treatment. <br>
+                          </p>
+                            <p>Indians fought in the Revolution for Indian liberties and Indian homelands, not for the British empire. But the image of Indian participation presented in the Declaration of Independence prevailed: most Americans believed that Indians had backed monarchy and tyranny. <b id='bold'>A nation conceived in liberty need feel no remorse about dispossessing and expelling those who had fought against its birth</b>.”
+                          </p>
+                          <p><i>
+                            - National Parks Service <sup>3</sup>
+                          </i></p>
+                    </div>
+
+                    <div id = '1787' class = 'event'>
+                          <h1 id='date'>1787</h1>
+                          <h2 id='title'>Northwest Ordinances</h2>
+                          <img src="images/NorthwestOrdinance.jpg" alt="Map of Ohio under the N.W. Ordinance">
+                          <p><i>
+                            <a href="http://www.ohiohistorycentral.org/w/Northwest_Ordinance"> New mapping of the Ohio territory, implemented under the Northwest Ordinances - Ohio History Central </a>
+                          </i></p>
+                          <p>
+                            “The Northwest Ordinance established a government for the Northwest Territory, area Northwest of the Ohio River, outlined the process for admitting a new state to the Union, and guaranteed that newly created states would be equal to the original thirteen states. Considered one of the most important legislative acts of the Confederation Congress, the Northwest Ordinance also protected civil liberties and outlawed slavery in the new territories.”
+                          </p>
+                          <p><i>
+                            - Library of Congress <sup>4</sup>
+                          </i></p><br>
+                    </div>
+                        
+                        
+                    <div id = '1791' class = 'event'>
+
+                          <h1 id='date'>7/2/1791</h1>
+                          <h2 id='title'>The Treaty of Holston</h2>
+                          <img src="images/TreatyOfHolston.png" alt="Treaty of Holston Map">
+                          <p><i>
+                           <a href="https://nativeheritageproject.files.wordpress.com/2013/04/broken-5.png"> - Native Heritage Project </a>
+                          </i></p>
+                          <p>
+                            “There were sixteen articles to the treaty of 'perpetual peace and friendship'. The Cherokee acknowledged that they were under the protection of the United States and agreed not to make treaties with any states, individuals, or foreign powers.
+                          </p>
+                          <p> 
+                            The boundary between the Cherokee nation and the United States was redrawn. The United States promised valuable trade goods and a $1,000 annuity to be delivered to the Cherokee to extinguish all Cherokee claims to lands east of the new boundary line, and guaranteed all other Cherokee lands. The Cherokee granted the United States exclusive right to regulate their trade, as well as unmolested use of a road through their territory and navigation of the Tennessee River.”
+                          </p>
+                          <p><i>
+                            - Archives.gov <sup>5</sup>
+                          </i></p><br>
+ 
+                    </div>
+                    
+                    <div id = '1803' class = 'event'>
+                          <h1 id='date'>7/4/1803</h1>
+                          <h2 id='title'>The Louisiana Purchase</h2>
+                          <img src="images/LouisianaPurchase1803.jpg" alt="Louisiana Purchase">
+                          <p><i>
+                            <a href='https://www.loc.gov/resource/g3701sm.gct00482/?sp=21'>- Library of Congress</a>
+                          </i></p>
+                          <p>
+                            “The Louisiana Purchase is a landmark event in American history, one that had a lasting impact not only on the size of the United States, but also on its economic, cultural, and political makeup. Before President Thomas Jefferson's administration purchased the territory in 1803, parts or all of the territory had been under the control of various Native American nations. <b id='bold'>This purchase opened up the country to Western Expansion by settlers</b>.”
+                          </p>
+                          <p><i>
+                            - Library of Congress <sup>6</sup>
+                          </i></p><br>
+                    </div>
+                    
+                    <div id = '1814' class = 'event'>
+                          <h1 id='date'>3/27/1814</h1>
+                          <h2 id='title'>Battle of Horseshoe Bend</h2>
+                          <img src="images/HorseshoeBendBattle.png" alt="Battle of Horseshoe Bend">
+                          <p><i>
+                           <a href="http://www.encyclopediaofalabama.org/article/h-1044"> - Encyclopedia of Alabama </a>
+                          </i></p>
+                          <p>
+                            “Andrew Jackson and an army consisting of Tennessee militia, United States regulars, and Cherokee and Lower Creek allies attacked Chief Menawa and his Upper Creek, or Red Stick, warriors fortified in the Horseshoe Bend of the Tallapoosa River.
+                          </p>
+                          <p>
+                            Facing overwhelming odds, the Red Sticks fought bravely yet ultimately lost the battle. More than 800 Upper Creek warriors died at Horseshoe Bend defending their homeland. This was the final battle of the Creek War of 1813-14. In treaty signed after the battle, <b id='bold'>the Creeks ceded more than 21 million acres of land</b>  to the United States.”
+                          </p>
+                          <p><i>
+                            - Encyclopedia of Alabama <sup>7</sup>
+                          </i></p><br>
+                    </div>
+                        
+                        
+                    <div id = '1819' class = 'event'>
+                          <h1 id='date'>2/22/1819</h1>
+                          <h2 id='title'>Adams-Onis Treaty</h2>
+                          <img src="images/AdamsOnis.jpg" alt="Map of Florida in 1819">
+                          <p><i>
+                            <a href='https://history.info/on-this-day/1819-spain-sells-florida-united-states-5000000/'>1819 Map of Florida - University of Florida</a>
+                          </i></p>
+                          <p>
+                            “General Andrew Jackson seized the Spanish forts at Pensacola and St. Marks in his 1818 authorized raid against Seminoles and escaped slaves who were viewed as a threat to Georgia. Adams defended Jackson, citing the necessity to restrain the Indians and escaped slaves since the Spanish failed to do so. Adams used Jackson’s military action to present Spain with a demand to either control the inhabitants of East Florida or cede it to the United States. Spain ceded East Florida to the United States and renounced all claim to West Florida.”
+                          </p>
+                          <p><i>
+                            - History.state.gov <sup>8</sup>
+                          </i></p><br>
+                    </div>
+                        
+                    <div id = '1830' class = 'event'>
+                          <h1 id='date'>5/28/1830</h1>
+                          <h2 id='title'>Indian Removal Act and the Trail of Tears</h2>
+                          <img src="images/IndianRemovalAct1831.jpg" alt="Indian Removal Act">
+                          <p><i>
+                            <a href='https://guides.loc.gov/indian-removal-act'>Map of Georgia occupied by Cherokee, surveyed in 1831 - Library of Congress</a>
+                          </i></p>
+                          <p>
+                            “The Indian Removal Act was signed into law by President Andrew Jackson on May 28, 1830, authorizing the president to <b id='bold'>grant unsettled lands west of the Mississippi in exchange for Indian lands within existing state borders</b>. A few tribes went peacefully, but many resisted the relocation policy. During the fall and winter of 1838 and 1839, the Cherokees were forcibly moved west by the United States government. Approximately 4,000 Cherokees died on this forced march, which became known as the <b id='bold'>Trail of Tears.</b>”
+                          </p>
+                          <p><i>
+                            - Library of Congress <sup>9</sup>
+                          </i></p><br>
+                    </div>
+                    
+                    <div id = '1848' class = 'event'>
+                          <h1 id='date'>2/2/1848</h1>
+                          <h2 id='title'>Treaty of Guadalupe Hidalgo</h2>
+                          <img src="images/GuadalupeHidalgo.png" alt="Map of Mexican Cession">
+                          <p><i>
+                            <a href='https://www.ssc.wisc.edu/soc/racepoliticsjustice/2017/07/12/what-the-treaty-of-guadalupe-actually-says/'>Map of land ceded by Mexico - University of Wisconsin</a>
+                          </i></p>
+                          <p>
+                            “The Treaty of Guadalupe Hidalgo ended the U.S.-Mexican War. Signed on 2 February 1848, it is the oldest treaty still in force between the United States and Mexico. As a result of the treaty, the United States acquired more than 500,000 square miles of territory.
+                          </p>
+                          <p>
+                            Since 1848, Native Americans and Mexican Americans have struggled to achieve political and social equality within the United States, often citing the Treaty of Guadalupe Hidalgo as a document that promised civil and property rights. Although the treaty promised U.S. citizenship to former Mexican citizens, the Native Americans in the ceded territories, who in fact were Mexican citizens, were not given full U.S. citizenship until the 1930s.”
+                          </p>
+                          <p><i>
+                            - PBS <sup>10</sup>
+                          </i></p><br>
+                          <h1 id='date'>8/14/1848</h1>
+                          <h2 id='title'>Oregon Territory</h2>
+                          <img src="images/oregontrail.jpg" alt="Oregon Trail">
+                          <p><i>
+                            <a href="https://oregonencyclopedia.org/media/uploads/Philip_mansfield_OrHi81636.jpg">Map of the Oregon Trail - Oregon Encyclopedia</a>
+                          </i></p>
+                          <p>
+                            “In northeastern Oregon, officials acting on behalf of the United States invited Indians to treaty councils, where they were urged to accept treaties and surrender much of their homeland. The government said treaties would prevent bloodshed with white settlers who were eager to resettle Native lands. Under the terms of the treaties, people from many tribes secured for themselves a minute portion of their former estates and lost <b id='bold'>valuable resources that they considered to be part of their spiritual birthright, including land, fish, game, roots, berries, minerals, timber, and water.</b>”
+                          </p>
+                          <p><i>
+                            - Oregon Encyclopedia <sup>11</sup>
+                          </i></p><br>
+                          <h1 id='date'>1848</h1>
+                          <h2 id='title'>The Gold Rush</h2>
+                          <img src="images/goldrush.jpg" alt="Gold Rush Headline">
+                          <p><i>
+                            <a href='https://www.pbs.org/wgbh/americanexperience/features/goldrush-california/'>Headline from the Gold Rush - PBS</a>
+                          </i></p>
+                          <p>
+                            “For millennia a diverse population of Native American tribes thrived on the abundant lands of California. Before European settlers arrived, an estimated 300,000 native people lived in small villages throughout the area. Contact with the new settlers brought about serious disruptions to the native way of life. The gold rush of 1848 brought still more devastation. <b id='bold'>Violence, disease and loss overwhelmed the tribes</b>. By 1870, an estimated 30,000 native people remained in the state of California, most on reservations without access to their homelands.”
+                          </p>
+                          <p><i>
+                            - PBS <sup>12</sup>
+                          </i></p><br>
+                    </div>
+                    <div id = '1851' class = 'event'>
+                          <h1 id='date'>1851</h1>
+                          <h2 id='title'>Indian Appropriations Act and Reservation Systems</h2>
+                          <img src="images/reservation.jpg" alt="Indian Appropriations Act">
+                          <p><i>
+                            <a href='https://www.khanacademy.org/humanities/us-history/the-gilded-age/american-west/a/the-reservation-system'>Shosone at Ft. Washakie reservation in Wyoming -National Archives </a>
+                          </i></p>
+                          <p>
+                              “As white settlers continued westward and needed more land, Indian territory shrank—but there was no more land for the government to move them to. In 1851, Congress passed the Indian Appropriations Act which created the Indian <b id='bold'>reservation system</b> and provided funds to move Indian tribes onto farming reservations and hopefully keep them under control. Indians were not allowed to leave the reservations without permission.”<br>
+                            </p>
+                          <p><i>
+                            - History Channel <sup>13</sup>
+                          </i></p><br>
+                          
+                    </div>
+
+                    <div id = '1871' class = 'event'>
+                      <h1 id='date'>1871</h1>
+                      <h2 id='title'>No More Treaties</h2>
+                      <img src="images/AppropriationsAct.jpg" alt="Indian Appropriations Act">
+                      <p><i>
+                        <a href='http://recordsofrights.org/events/51/the-end-of-treaty-making'>Indian Appropriations Act - National Archives</a>
+                      </i></p>
+                      <p>
+                      “In 1871, the House of Representatives added a rider to an appropriations bill ceasing to recognize individual tribes within the United States as independent nations “with whom the United States may contract by treaty.” This act ended the nearly 100-year-old practice of treaty-making between the Federal Government and Native American tribes.”
+                      </p>
+                      <p><i>
+                        - National Archives <sup>14</sup>
+                      </i></p><br>
+                </div>
+
+
+                    <div id = '1876' class = 'event'>
+                          <h1 id='date'>6/25/1876</h1>
+                          <h2 id='title'>Battle of Little Bighorn</h2>
+                          <img src="images/SittingBull.jpg" alt="Sitting Bull">
+                          <p><i>
+                            <a href="https://www.si.edu/object/siris_arc_21545">Sitting Bull - Smithsonian Institution</a>
+                          </i></p>
+                          <p>
+                            “Although the Second Treaty of Fort Laramie (1868), in effect, had guaranteed to the Lakota and Dakota (Yankton) Sioux as well as the Arapaho Indians exclusive possession of the Dakota territory west of the Missouri River, white miners in search of gold were settling in lands sacred especially to the Lakota. Unwilling to remove the settlers and unable to persuade the Lakota to sell the territory, the U.S. government issued an order to the Indian agencies that all Indians return to the designated reservations by January 31, 1876, or be deemed hostile.
+                          </p>
+                          <p>
+                            In defiance of the government’s threats, bands of Lakota and Northern Cheyenne Indians (along with a smaller number of Arapaho) who had refused to be confined by reservation boundaries came together under the leadership of Sitting Bull, a Lakota who called for resistance to U.S. expansion. <b id='bold'>Sitting Bull and the people behind him won the battle, government troops flooded the area, forcing the Indians to surrender</b>.”
+                          </p>
+                          <p><i>
+                            - Encyclopedia Brittanica <sup>15</sup>
+                          </i></p><br>
+                    </div>
+                    <div id = '1887' class = 'event'>
+                          <h1 id='date'>2/8/1887</h1>
+                          <h2 id='title'>Dawes Act</h2>
+                          <img src="images/DawesActNativeParticipants.png" alt="Dawes Act Advertisement">
+                          <p><i>
+                            <a href="https://www.nps.gov/subjects/teachingwithhistoricplaces/images/NHD-themebook-2017-dawesactprimarysourceimage.jpg?maxwidth=650&autorotate=false">Advertisement for land from the Dawes Act - National Parks Service </a>
+                          </i></p>
+                          <p>
+                            “U.S. law providing for the distribution of Indian reservation land among individual tribesmen, with the aim of creating farmers in the white man’s image. <b id='bold'>Indian life deteriorated in a manner not anticipated by its sponsors</b>. The social structure of the tribe was weakened; many nomadic Indians were unable to adjust to an agricultural existence; others were swindled out of their property; and life on the reservation came to be characterized by disease, filth, poverty, and despondency. The act also provided that any “surplus” land be made available to whites, who by 1932 had acquired two-thirds of the 138,000,000 acres the Indians had held in 1887.”
+                          </p>
+                          <p><i>
+                            - Encyclopedia Brittanica <sup>16</sup>
+                          </i></p><br>
+                    </div>
+                    <div id = '1897' class = 'event'>
+                          <h1 id='date'>1879-1918</h1>
+                          <h2 id='title'>Carlisle Indian School</h2>
+                          <img src="images/CarlisleIndianSchool.jpg" alt="Carlisle Students">
+                          <p><i>
+                            <a href="https://www.nypl.org/blog/2017/11/06/native-american-indian-alaska-native-heritage-month">Students at the Carlisle Indian School - New York Public Library</a>
+                          </i></p>
+                          <p>
+                              “In 1879, the United States government undertook a project aimed at <b id='bold'>assimilating Native American youth into mainstream American culture</b>. Amid dire predictions of the 'extinction' of Native Americans without complete and rapid integration, Civil War veteran Lt. Col. Richard Henry Pratt spearheaded the effort to create an off-reservation boarding school. Pratt instituted a system of forced 'Americanization,' <b id='bold'>abandonment of Native languages</b>, required conversion to Christianity, and harsh military discipline, and headed north to create the Carlisle Indian Industrial School.”
+                          </p>
+                          <p><i>
+                            - Carlisle Indian School Project <sup>17</sup>
+                          </i></p><br>
+                    </div>
+                    <div id = '1906' class = 'event'>
+                          <h1 id='date'>Today</h1>
+                        <br> <br> <br> <br>
+                          <h2 id='title'>Issues Facing Native Americans in the 21st Century</h2>
+                          <img src="images/ModernDay.jpg" alt="Deb Haaland">
+                          <p><i>
+                            <a href='https://media3.s-nbcnews.com/i/newscms/2019_01/1399352/rep-deb-haaland-today-main-190104-02_f0e35fa3019d9d92f0ce3a36c14efd4b.jpg'>Deb Haaland, one of two Native American Congresswomen, being sworn into office in 2019 - Today Show </a>
+                          </i></p>
+                          <p>
+                            Approximately 97% of originally held Native American land in the contiguous United States has been ceded to or forcefully taken by an outside entity.
+                          </p>
+                          <p>
+                            Today, Native Americans in the United States, living on and off reservations, face a number of unique issues. To learn more, visit the <a href="https://indianlaw.org/issues" target=_blank>Indian Law Resource Center.</a>
+                          </p>
+                          <br>
+                    </div> 
+                    <div id='credits'>
+                      <h1 id='title'>About Our Project</h1>
+                      <h3 class='subtitle'>Acknowledgements</h3>
+                        <p>We would like to thank Professor Robert E. Roth for all of his extensive feedback he gave throughout or design process. </p>
+                        <p>In addition, a huge thanks to our patient and brilliant teaching assistant, Yuying Chen, for all of the programming help she gave us. Console logs can only do so much.</p>
+                        <p>Lastly, we thank Professor Bill Gartner for his ethical guidance on our project.</p>
+
+                      <h3 class="subtitle">Sources</h3>
+                      <ol>
+                        <li>
+                          <a href="http://nationalhumanitiescenter.org/pds/becomingamer/growth/text7/indianlands.pdf"> National Humanities Center (2009). The Taking of Indian Lands, views of colonists, Indians, and the king; selections, 1707-1764 </a>
+                        </li>
+                        <li>
+                          <a href="http://www.loc.gov/teachers/classroommaterials/presentationsandactivities/presentations/immigration/native_american.html">Library of Congress (2019). Destroying the Native American Cultures</a>
+                        </li>
+                        <li>
+                          <a href='https://www.nps.gov/revwar/about_the_revolution/american_indians.html'>Galloway (2008). Stories from the Revolution <i>National Parks Service</i></a>
+                        </li>
+                        <li>
+                          <a href="https://www.loc.gov/rr/program/bib/ourdocs/northwest.html">Library of Congress (2019). Northwest Ordinance</a>
+                        </li>
+                        <li>
+                          <a href="https://founders.archives.gov/documents/Washington/05-09-02-0100">National Archives (2018). Proclamation on the Treaty of Holston, 11 November 1791. <i>Founders Online</i></a>
+                        </li>
+                        <li>
+                          <a href='https://www.loc.gov/rr/program/bib/ourdocs/louisiana.html'>Library of Congress (2019). Louisiana Purchase</a>
+                        </li>
+                        <li>
+                          <a href="http://www.encyclopediaofalabama.org/article/h-1044"> Jensen, O. (2017). Battle of Horseshoe Bend <i>Encyclopedia of Alabama</i></a>
+                        </li>
+                        <li>
+                          <a href="https://www.thecanadianencyclopedia.ca/en/article/convention-of-1818"> Nicholson, N. (2016). Convention of 1818  <i>The Canadian Encyclopedia </i></a>
+                        </li>
+                        <li>
+                          <a href="https://history.state.gov/milestones/1801-1829/florida"> Office of the Historian (2019). Acquisition of Florida: Treaty of Adams-Onis (1819) and Transcontinental Treaty (1821) <i>Bureau of Public Affairs </i></a>
+                        </li>
+                        <li>
+                          <a href="https://guides.loc.gov/indian-removal-act"> Library of Congress (2019). Indian Removal Act: Primary Documents in American History</a>
+                        </li>
+                        <li>
+                          <a href="https://oregonencyclopedia.org/articles/native_american_treaties_eastern_oregon/#.XNHvvY5KiUl"> Oregon Historical Society (2019). Native American Treaties, Northeastern Oregon <i>The Oregon Encyclopedia</i></a>
+                        </li>
+                        <li>
+                          <a href="https://www.pbs.org/kera/usmexicanwar/war/wars_end_guadalupe.html"> Griswold, R. (2006). War's End <i>Public Broadcasting Service</i></a>
+                        </li>
+                        <li>
+                          <a href="https://www.pbs.org/wgbh/americanexperience/features/goldrush-value-land/"> Am Experience (2019). The Gold Rush Impact on Native Tribes <i>Public Broadcasting Service</i></a>
+                        </li>
+                        <li>
+                          <a href="https://www.history.com/topics/native-american-history/indian-reservations#section_5"> History.com Editors (2019). Indian Reservation <i> A&E Television Networks, LLC.</i></a>
+                        </li>
+                        <li>
+                          <a href="https://www.britannica.com/event/Battle-of-the-Little-Bighorn"> Urwin, G. (2019). Battle of Little Bighorn <i> Encyclopaedia Britannica</i></a>
+                        </li>
+                        <li>
+                          <a href="https://www.britannica.com/topic/Dawes-General-Allotment-Act"> Augustyn, A, et al. (2019). Dawes General Allotment Act <i> Encyclopaedia Britannica</i></a>
+                        </li>
+                        <li>
+                          <a href="http://www.carlisleindianschoolproject.com/history/">  Institutional History (2019). <i> Carlisle Indian School Project</i></a>
+                        </li>
+                        <li>
+                          <a href="https://www.theatlantic.com/photo/2013/04/native-americans-portraits-from-a-century-ago/100489/"> Cover Photo Courtesy of Edward S. Curtis (2013). Six Navajo on horseback, ca. 1904 <i>Library of Congress</i> </a>
+                        </li>
+
+  
+                      </ol>
+                      
+                      <h3 class="subtitle">Our Team</h3>
+                      <ul>
+                        <li><a href='https://www.linkedin.com/in/jbrmarks/'>Joe Marks </a> is a Masters Student at University of Wisconsin-Madison with an undergraduate background in Computer Science</li>
+                        <li><a href='https://www.linkedin.com/in/catherinemcsorley/'>Catherine McSorley </a> is a graduating senior in Mathematics & Statistics who will be pursuing a Masters Degree in Analytics at North Carolina State University</li>
+                        <li><a href='https://twitter.com/TimPrestby'>Timothy Prestby</a> is an undergraduate senior majoring in Honors Cartography and GIS with an Environmental Studies Minor. Tim plans to pursue a Master's Degree in Cartography upon graduation.</li>
+                      </ul>
+
+                    </div> 
+
+
+                    </section>
+
+                    <!--END OF TYPE CONTENT..................................................-->
+
+
+              </article>
+
+          </div> <!-- End info pane -->
+      </div> <!-- End wrapper -->
+
+      <div id='map'> </div>
+
+        
+    <script src="lib/scrollMonitor.js" type="text/javascript"></script>
+        
+      <script type="text/javascript" src="lib/jquery.js"></script>
+
+      <script type="text/javascript" src="js/main.js">
+      
+      </script>        
+
+    </body>
+</html>

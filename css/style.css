@@ -15,7 +15,7 @@ html, body {
     overflow: hidden;
     display: block;
     position: relative;
-    padding-bottom: 10vh; /* height of your footer */
+    padding-bottom: 12vh; /* height of your footer */
 }
 
 p {
@@ -250,6 +250,7 @@ footer{
     bottom: 0;
     position: absolute;
     width: 100%;
+    min-height: 11vh;
 }
 footer p {
     padding-top: 10px;
