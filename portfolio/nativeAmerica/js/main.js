@@ -473,7 +473,7 @@ function updateSlider(timelineSlider){
 
 //Function: Load all the data using AJAX//
 function loadData(map, year){
-    $.ajax("data/NativeLand1880On.geojson", {
+    $.ajax("../data/NativeLand1880On.geojson", {
         dataType: "json",
         success: function(response){
             // Sort the data in yearMap by year
@@ -486,7 +486,7 @@ function loadData(map, year){
             };
         }
     });
-    $.ajax("data/NativeLandPre1880.geojson", {
+    $.ajax("../data/NativeLandPre1880.geojson", {
         dataType: "json",
         success: function(response){
             // Sort the data in yearMap by year
@@ -499,7 +499,7 @@ function loadData(map, year){
             };
         }
     });
-    $.ajax("data/LandLostWithoutTreaty.geojson", {
+    $.ajax("../data/LandLostWithoutTreaty.geojson", {
         dataType: "json",
         success: function(response){
             // Sort the data in yearMap by year
