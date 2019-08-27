@@ -501,7 +501,7 @@ function updateSlider(timelineSlider){
         setTimeout(function(){updateSlider(timelineSlider)}, 10);
     }
 }
-//Poke
+
 //Function: Load all the data using AJAX//
 function loadData(map, year){
     $.ajax("./NativeLand1880On.geojson", {
