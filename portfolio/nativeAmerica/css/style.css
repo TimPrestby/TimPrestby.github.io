@@ -5,6 +5,7 @@ html, body {
     height: 100%;
     overflow-y: scroll;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 /*//////////////Stylize intro page///////////////////*/
@@ -17,13 +18,15 @@ html, body {
     background-size: cover;
     text-align: center;
     padding-bottom: 40vh;
-    color: #008080;
+    color: #009933;
     height: 60vh;
     width: 100vw;
     overflow: hidden;
     z-index: 100000000000000;
     margin: 0;
     position: absolute;
+    padding-left: 1vw;
+    padding-right: 1vw;
 }
 
 #intropage h1 {
@@ -42,7 +45,7 @@ html, body {
 #intropage h3{
     font-size: 1.75em;
     color: white;
-    text-shadow: 2px 2px 2px #008080;
+    text-shadow: 2px 2px 2px black;
     font-family: 'Sanchez', serif;
 }
 
@@ -56,7 +59,7 @@ html, body {
 #intropage p{
     font-size: 1.25em;
     color: white;
-    text-shadow: 2px 2px 2px #008080;
+    text-shadow: 2px 2px 2px black;
     font-family: 'Sanchez', serif;
 }
 
@@ -90,22 +93,63 @@ font-size: .9em !important;
     padding-top: 15vh;
 }
 
-#arrows{
-    float:left;
-    padding-top: 40vh;
-    padding-left: 4.4vw;
-    display: inline-block;
-    /*left: 60%;
-    bottom: 0%;*/
-    font-size: .5em;
-    /*transform: translate(-25%, 0%);*/
+.arrows{
+    clear: both;
+    position: relative;
+	bottom: 10px;
+	display: inline-block;
+	text-align: center;
+	font-size: 20px;
+	z-index: 100;
+	text-decoration: none;
+	text-shadow: 0;
+    width: 13px;
+    height: 13px;
+    border-bottom: 10px solid #016924;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #000;
+    margin: 0 auto;
+    border-right: 10px solid #016924;
+    -webkit-transform: translate(-50%, 0%) rotate(45deg);
+    -moz-transform: translate(-50%, 0%) rotate(45deg);
+    transform: translate(-50%, 0%) rotate(45deg);
+	-webkit-animation: fade_move_down 4s ease-in-out infinite;
+	-moz-animation:    fade_move_down 4s ease-in-out infinite;
+	animation:         fade_move_down 4s ease-in-out infinite;
+    padding: 5vh;
+    margin-bottom: 10vh;
 }
+
+.arrowContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clear: both;
+}
+
+/*animated scroll arrow animation*/
+@-webkit-keyframes fade_move_down {
+    0%   { -webkit-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+    50%  { opacity: 1;  }
+    100% { -webkit-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+  }
+  @-moz-keyframes fade_move_down {
+    0%   { -moz-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+    50%  { opacity: 1;  }
+    100% { -moz-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+  }
+  @keyframes fade_move_down {
+    0%   { transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+    50%  { opacity: 1;  }
+    100% { transform:translate(0,10px) rotate(45deg); opacity: 0; }
+  }
 
 /*//////////////Stylize InfoPanel ///////////////////*/
 /*///////////////////////////////////////////////////*/
 #bold{
     font-size: 1.1em !important;
-    color: #008080;
+    color: #009900
+    ;
     font-style: italic;
     text-shadow: 1px 1px 1px black;
 }
@@ -128,12 +172,13 @@ img {
 
 #wrapper {
   position:absolute;
-  height:100%;
+  height:1%;
   width:100%;
 }
 
 a {
-    color: #008080;
+    color: #009900
+    ;
     font-style: italic;
     text-decoration-line: none;
     text-shadow: 1px 1px 1px black;
@@ -167,14 +212,16 @@ article.container {
 
 #date{
     font-size:2.25em;
-    color: #008080; 
+    color: #009900
+    ; 
     text-align: center;
     text-shadow: 2px 2px 2px black;
     margin-bottom: 0;
 }
 
 #title{
-    color: #008080;
+    color: #009900
+    ;
     text-align: center;
     font-size: 2em;
     text-shadow: 2px 2px 2px black;
@@ -309,7 +356,8 @@ li a:hover{
 }
 
 .subtitle{
-    color: #008080;
+    color: #009900
+    ;
     text-shadow: 1px 1px 1px black;
 }
 
@@ -337,7 +385,7 @@ sup{
     background-color: #414142;
     border-radius: 25px;
     font-family: sans-serif;   
-    color: #008080;
+    color: #006600;
     text-shadow: 2px 2px 2px black;
 }
 
@@ -549,7 +597,33 @@ a.leaflet-popup-close-button {
     #source {
         font-size:.8em;
     }
+
+    .arrows{
+        clear: both;
+        position: relative;
+        bottom: 10px;
+        display: inline-block;
+        text-align: center;
+        font-size: 20px;
+        z-index: 100;
+        text-decoration: none;
+        text-shadow: 0;
+        width: 13px;
+        height: 13px;
+        border-bottom: 10px solid #016924;
+        border-radius: 20px;
+        box-shadow: 5px 5px 5px #000;
+        margin: 0 auto;
+        border-right: 10px solid #016924;
+        -webkit-transform: translate(-50%, 0%) rotate(45deg);
+        -moz-transform: translate(-50%, 0%) rotate(45deg);
+        transform: translate(-50%, 0%) rotate(45deg);
+        -webkit-animation: fade_move_down 4s ease-in-out infinite;
+        -moz-animation:    fade_move_down 4s ease-in-out infinite;
+        animation:         fade_move_down 4s ease-in-out infinite;
+    }
 }
+
 
 /*//////////////Stylize For Tablets ///////////////////*/
 /*///////////////////////////////////////////////////*/
@@ -621,7 +695,8 @@ a.leaflet-popup-close-button {
         text-align: center !important;
         float: none;
         padding:0;
-        margin-bottom:80px;
+        margin-bottom:20px;
+        font-size: 2vh;
     }
 
     #left{
@@ -629,7 +704,8 @@ a.leaflet-popup-close-button {
         text-align:center !important;
         float:none;
         padding: 0;
-        margin-bottom:80px;
+        margin-bottom:20px;
+        font-size: 2vh;
     }
 
     #disclaimer{
@@ -640,6 +716,7 @@ a.leaflet-popup-close-button {
         text-align: center !important;
         float: none;
         padding:0;
+        font-size: 2vh;
     }
 
     #intropage p  {
@@ -650,15 +727,50 @@ a.leaflet-popup-close-button {
         font-size:.8em;
     }
     
+    .legend-control-container {
+        color: rgb(85, 85, 85);
+        background: white;
+        border-radius: 15px;
+        text-align: center;
+        width: 15vw;
+        font-family: 'Sanchez', serif;
+        font-size: 1.25em;
+    }
+
+    #legend-title{
+        margin-bottom: 10px !important;
+        font-size: 1em;
+    }
+
+    #intropage {
+        background-image: url(../images/HeaderImage.jpg);
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+        padding-bottom: 40vh;
+        color: #009933;
+        height: 60vh;
+        width: 100vw;
+        overflow: hidden;
+        z-index: 100000000000000;
+        margin: 0;
+        position: absolute;
+        padding-left: 1vw;
+        padding-right: 1vw;
+    }
 
 }
 
+/*//////////////Stylize For Most Phones ///////////////////*/
+/*///////////////////////////////////////////////////*/
 @media only screen and (max-width: 600px)  {
     .leaflet-slider-container {
         height: .1vh !important;
         margin-bottom: 0px !important;
         width: 100vw;
         background-color: rgba(245, 222, 179, 0) !important;
+        
 
     }
 
@@ -683,7 +795,10 @@ a.leaflet-popup-close-button {
         max-width: 95vw !important;
         min-width: 95vw !important;
     
-    
+    }
+
+    .leaflet-right{
+        padding-bottom: 3vh;
     }
 
     article.container {
@@ -727,7 +842,7 @@ a.leaflet-popup-close-button {
         text-align: center !important;
         float: none;
         padding:0;
-        margin-bottom:20px;
+        margin-bottom:0px;
         font-size: .75em;
     }
 
@@ -768,9 +883,41 @@ a.leaflet-popup-close-button {
     #timelineSlider{
         margin-bottom:0;
     }
+    #clear{
+        display: none;
+    }
+
+    #intropage {
+        background-image: url(../images/HeaderImage.jpg);
+        background-position: 50% 0%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+        padding-bottom: 40vh;
+        color: #009933;
+        height: 60vh;
+        width: 95vw;
+        overflow: hidden;
+        z-index: 100000000000000;
+        margin: 0;
+        position: relative;
+        padding-left: 3vw;
+        padding-right: 3vw;
+        font-size: 1.1em;
+    }
 
 }
 
+/*//////////////Stylize For Tall and Narrow Phones ///////////////////*/
+/*///////////////////////////////////////////////////*/
+@media only screen and (max-width: 400px) and (min-height:775px) and (max-height: 825px) {
+    #clear{
+        display: inherit !important;
+    }
+}
+
+/*//////////////Stylize For Small Phones ///////////////////*/
+/*///////////////////////////////////////////////////*/
 @media only screen and (max-width: 400px)  {
     
     #intropage h1{
@@ -780,7 +927,7 @@ a.leaflet-popup-close-button {
 
     #intropage h2{
     font-size: 1em;
-    text-shadow: 3px 3px 3px black;
+    text-shadow: 1px 1px 1px black;
     padding-bottom: 10px;
     }
 
@@ -818,6 +965,10 @@ a.leaflet-popup-close-button {
     #arrows{
         z-index:1000;
         position: fixed;
+    }
+
+    #clear{
+        display: none;
     }
 
 }

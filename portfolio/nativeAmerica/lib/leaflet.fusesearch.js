@@ -299,36 +299,38 @@ L.Control.FuseSearch = L.Control.extend({
         
         // Does this result already exist in the resultsMap
         var resultItem;
-        if((resultItem = resultsMap.get(props.Nation_Cor)) != undefined) {
+        console.log(props.Nation_Cor);
+        console.log(props.Year_value);
+        if((resultItem = resultsMap.get(props.Nation_Cor+props.Year_value)) != undefined) {
             // If it does, remove the old entry from the container
             L.DomUtil.remove(resultItem);
             // Create a new entry and place it in the container
             resultItem = L.DomUtil.create('p', 'result-item', container);
             // Replace the entry in the results map
-            resultsMap.set(props.Nation_Cor, resultItem);
+            resultsMap.set(props.Nation_Cor+props.Year_value, resultItem);
             
             // Add the props to the our combined props map
-            combinedPropsMap.get(props.Nation_Cor).set(props.layer, props.layer);
+            combinedPropsMap.get(props.Nation_Cor+props.Year_value).set(props.layer, props.layer);
         }else{
             // If it does not exist in the results map
             // Create a new entry and place it in the container
             resultItem = L.DomUtil.create('p', 'result-item', container);
             // Place the entry in the results map
-            resultsMap.set(props.Nation_Cor, resultItem);
+            resultsMap.set(props.Nation_Cor+props.Year_value, resultItem);
             // Create an entry for our combined props map
-            combinedPropsMap.set(props.Nation_Cor, myMap = new Map());
-            combinedPropsMap.get(props.Nation_Cor).set(props.layer, props.layer);
+            combinedPropsMap.set(props.Nation_Cor+props.Year_value, myMap = new Map());
+            combinedPropsMap.get(props.Nation_Cor+props.Year_value).set(props.layer, props.layer);
         }
         
         L.DomUtil.addClass(resultItem, 'clickable');
         resultItem.onclick = function() {
             // Select (highlight) corresponding layers on click
             // Get the corresponding layers for what was clicked
-            var values = Array.from(combinedPropsMap.get(props.Nation_Cor).values())
+            var values = Array.from(combinedPropsMap.get(props.Nation_Cor+props.Year_value).values())
             for(i = 0; i < values.length; i++){
                 // Set the style for highlight
                 values[i].setStyle({
-                fillColor: '#4169e1',
+                fillColor: '#009900',
                 dashArray: '',
                 fillOpacity: 1
                 });
@@ -393,11 +395,11 @@ L.Control.FuseSearch = L.Control.extend({
             
             
             // Add props from the combined Props map to the selection map if needed
-            if((selectionMap.get(props.Nation_Cor)) != undefined) {
+            if((selectionMap.get(props.Nation_Cor+props.Year_value)) != undefined) {
                 // If it already exists in the map, nothing else to do
             }else{
                 // If it does not exist in the map, add it
-                selectionMap.set(props.Nation_Cor, props);
+                selectionMap.set(props.Nation_Cor+props.Year_value, props);
                 
                 // Create a selected item and place it in the selectionContainer
                 var selectedItem = L.DomUtil.create('p', 'selected-item', selectionContainer);
@@ -405,7 +407,7 @@ L.Control.FuseSearch = L.Control.extend({
                 // Add text to selectedItem
                 selectionContent = document.createElement('div');
                 selectionContent.className ='selection-content';
-                str = '<b>' + props.Nation_Cor + '</b>';
+                str = '<b>' + props.Nation_Cor+' - '+props.Year_value + '</b>';
                 selectionContent.innerHTML=str;
                 selectedItem.appendChild(selectionContent);
                 
@@ -419,7 +421,7 @@ L.Control.FuseSearch = L.Control.extend({
                 selectedItem.onclick = function() {
  
                     // Get the corresponding layers for what was clicked
-                    var values = Array.from(combinedPropsMap.get(props.Nation_Cor).values())
+                    var values = Array.from(combinedPropsMap.get(props.Nation_Cor+props.Year_value).values())
                     for(i = 0; i < values.length; i++){
                         // Set the style for highlight to default
                         values[i].setStyle({
@@ -429,7 +431,7 @@ L.Control.FuseSearch = L.Control.extend({
                         });
                     }
                     // Remove the item from the selection map and the selection container
-                    selectionMap.delete(props.Nation_Cor);
+                    selectionMap.delete(props.Nation_Cor+props.Year_value);
                     L.DomUtil.remove(selectedItem);
                     
                     // Check if this was the last item in the selection container
@@ -455,10 +457,17 @@ L.Control.FuseSearch = L.Control.extend({
         if (null !== this.options.showResultFct) {
             this.options.showResultFct(feature, resultItem);
         } else {
+            // console.log(this);
+            // console.log(this._keys);
+            // console.log(props);
+            // console.log(props[this._keys[0]]);
+            // console.log(props["Year_value"]);
             str = '<b>' + props[this._keys[0]] + '</b>';
             for (var i = 1; i < this._keys.length; i++) {
                 str += '<br/>' + props[this._keys[i]];
+                // console.log(props[this._keys[i]]);
             }
+            str += " - " + props["Year_value"];
             resultItem.innerHTML = str;
         };
 
