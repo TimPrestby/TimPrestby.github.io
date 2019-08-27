@@ -544,7 +544,6 @@ function loadData(map, year){
         }
     });
 }
-//Fixed stuff
 
 // Function to process data
 function processData(data, map){
