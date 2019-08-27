@@ -545,6 +545,7 @@ function loadData(map, year){
     });
 }
 
+//Check paths
 
 // Function to process data
 function processData(data, map){
