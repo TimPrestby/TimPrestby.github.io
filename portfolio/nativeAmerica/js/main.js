@@ -544,6 +544,7 @@ function loadData(map, year){
         }
     });
 }
+//Added path
 
 
 // Function to process data
