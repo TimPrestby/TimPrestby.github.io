@@ -393,7 +393,7 @@ function createSectionWatchers(timelineSlider){
     var d1887Watcher = scrollMonitor.create($('#1887'), 1);
     var d1906Watcher = scrollMonitor.create($('#1906'), 1);
 
-    // Add watch events to move timeline to corresponding date  
+    // Add watch events to move timeline to corresponding dates  
     introWatcher.fullyEnterViewport(function () {
         slideToDate(1775, timelineSlider);
     });
