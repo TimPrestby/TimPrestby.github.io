@@ -36,7 +36,7 @@ L.Control.FuseSearch = L.Control.extend({
         position: 'topright',
         title: 'Search',
         panelTitle: '',
-        placeholder: 'Search',
+        placeholder: 'Search by nation',
         caseSensitive: false,
         threshold: 0.5,
         maxResultLength: null,
@@ -299,8 +299,6 @@ L.Control.FuseSearch = L.Control.extend({
         
         // Does this result already exist in the resultsMap
         var resultItem;
-        console.log(props.Nation_Cor);
-        console.log(props.Year_value);
         if((resultItem = resultsMap.get(props.Nation_Cor+props.Year_value)) != undefined) {
             // If it does, remove the old entry from the container
             L.DomUtil.remove(resultItem);
@@ -324,9 +322,13 @@ L.Control.FuseSearch = L.Control.extend({
         
         L.DomUtil.addClass(resultItem, 'clickable');
         resultItem.onclick = function() {
+
             // Select (highlight) corresponding layers on click
             // Get the corresponding layers for what was clicked
             var values = Array.from(combinedPropsMap.get(props.Nation_Cor+props.Year_value).values())
+            // Slide to year before cessions year so nation is visible on map
+            slideToDate(props.Year_value-1, timelineSlider);
+            var featureGroup = L.featureGroup();
             for(i = 0; i < values.length; i++){
                 // Set the style for highlight
                 values[i].setStyle({
@@ -334,7 +336,16 @@ L.Control.FuseSearch = L.Control.extend({
                 dashArray: '',
                 fillOpacity: 1
                 });
+
+                // Add layer to feature group
+                featureGroup.addLayer(values[i]);
             }
+
+            
+            // Zoom map to selection
+            map.fitBounds(featureGroup.getBounds(), {options: {padding: [10,10]}});
+            
+
             
             // Check if this is the first item added to our selected list
             if (selectionMap.size == 0) {
@@ -343,7 +354,7 @@ L.Control.FuseSearch = L.Control.extend({
                 // Create the title and add it to the div
                 titleDiv = document.createElement('div');
                 titleDiv.className ='selection-list-title';
-                titleDiv.innerHTML = "Selected Names:";
+                titleDiv.innerHTML = "Highlighted Nation(s):";
                 selectionContainer.appendChild(titleDiv);
                 
                 // Create the Clear All item
@@ -457,15 +468,9 @@ L.Control.FuseSearch = L.Control.extend({
         if (null !== this.options.showResultFct) {
             this.options.showResultFct(feature, resultItem);
         } else {
-            // console.log(this);
-            // console.log(this._keys);
-            // console.log(props);
-            // console.log(props[this._keys[0]]);
-            // console.log(props["Year_value"]);
             str = '<b>' + props[this._keys[0]] + '</b>';
             for (var i = 1; i < this._keys.length; i++) {
                 str += '<br/>' + props[this._keys[i]];
-                // console.log(props[this._keys[i]]);
             }
             str += " - " + props["Year_value"];
             resultItem.innerHTML = str;

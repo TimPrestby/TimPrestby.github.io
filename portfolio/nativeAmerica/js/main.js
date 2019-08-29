@@ -22,6 +22,9 @@ var landGained=0;
 // Spinner
 var spinner;
 
+// Timeline slider
+var timelineSlider;
+
 //Function: Initialize map
 function createMap(){
 
@@ -61,7 +64,7 @@ function createMap(){
 		//Sets default properties of the map
 			center: [37,-96.55],
             zoom: 4,
-            maxZoom:8,
+            maxZoom:12,
             minZoom:4,
             maxBounds: bounds,
             maxBoundsViscosity: 1.0,
@@ -139,7 +142,7 @@ function ajaxCompleted(map){
     createLayerGroups();
 
     //Responsive design for mobile
-    var timelineSlider;
+    // var timelineSlider;
     timelineSlider = createTimeline(map);
     addSearch(map);
     //Call create legend function
@@ -198,87 +201,87 @@ function makeDatesClickable(){
     document.getElementById('date-1776').addEventListener("click", function(){
         $('html, body').animate({
             scrollTop: $('#1776').offset().top
-        }, 1000);
+        }, 100);
     });
 
     document.getElementById('date-1787').addEventListener("click", function(){
         $('html, body').animate({
             scrollTop: $('#1787').offset().top
-        }, 1000);
+        }, 100);
     });
 
     document.getElementById('date-1791').addEventListener("click", function(){
         $('html, body').animate({
             scrollTop: $('#1791').offset().top
-        }, 1000);
+        }, 100);
     });
 
     document.getElementById('date-1803').addEventListener("click", function(){
         $('html, body').animate({
             scrollTop: $('#1803').offset().top
-        }, 1000);
+        }, 100);
     });
 
     document.getElementById('date-1814').addEventListener("click", function(){
         $('html, body').animate({
             scrollTop: $('#1814').offset().top
-        }, 1000);
+        }, 100);
     });
 
     document.getElementById('date-1819').addEventListener("click", function(){
         $('html, body').animate({
             scrollTop: $('#1819').offset().top
-        }, 1000);
+        }, 100);
     });
 
     document.getElementById('date-1830').addEventListener("click", function(){
         $('html, body').animate({
             scrollTop: $('#1830').offset().top
-        }, 1000);
+        }, 100);
     });
 
     document.getElementById('date-1848').addEventListener("click", function(){
         $('html, body').animate({
             scrollTop: $('#1848').offset().top
-        }, 1000);
+        }, 100);
     });
 
     document.getElementById('date-1851').addEventListener("click", function(){
         $('html, body').animate({
             scrollTop: $('#1851').offset().top
-        }, 1000);
+        }, 100);
     });
 
     document.getElementById('date-1871').addEventListener("click", function(){
 
         $('html, body').animate({
             scrollTop: $('#1871').offset().top
-        }, 1000);
+        }, 100);
 
     });
 
     document.getElementById('date-1876').addEventListener("click", function(){
         $('html, body').animate({
             scrollTop: $('#1876').offset().top
-        }, 1000);
+        }, 100);
+    });
+
+    document.getElementById('date-1879').addEventListener("click", function(){
+        $('html, body').animate({
+            scrollTop: $('#1879').offset().top
+        }, 100);
     });
 
     document.getElementById('date-1887').addEventListener("click", function(){
         $('html, body').animate({
             scrollTop: $('#1887').offset().top
-        }, 1000);
-    });
-
-    document.getElementById('date-1897').addEventListener("click", function(){
-        $('html, body').animate({
-            scrollTop: $('#1897').offset().top
-        }, 1000);
+        }, 100);
     });
 
     document.getElementById('date-1906').addEventListener("click", function(){
         $('html, body').animate({
             scrollTop: $('#1906').offset().top
-        }, 1000);
+        }, 100);
     });
     
     
@@ -316,10 +319,10 @@ function makeDatesClickable(){
     document.getElementById('date-1876').addEventListener("mouseover", function(){
         this.style.textDecoration = "underline";
     });
-    document.getElementById('date-1887').addEventListener("mouseover", function(){
+    document.getElementById('date-1879').addEventListener("mouseover", function(){
         this.style.textDecoration = "underline";
     });
-    document.getElementById('date-1897').addEventListener("mouseover", function(){
+    document.getElementById('date-1887').addEventListener("mouseover", function(){
         this.style.textDecoration = "underline";
     });
     document.getElementById('date-1906').addEventListener("mouseover", function(){
@@ -360,10 +363,10 @@ function makeDatesClickable(){
     document.getElementById('date-1876').addEventListener("mouseout", function(){
         this.style.textDecoration = "initial";
     });
-    document.getElementById('date-1887').addEventListener("mouseout", function(){
+    document.getElementById('date-1879').addEventListener("mouseout", function(){
         this.style.textDecoration = "initial";
     });
-    document.getElementById('date-1897').addEventListener("mouseout", function(){
+    document.getElementById('date-1887').addEventListener("mouseout", function(){
         this.style.textDecoration = "initial";
     });
     document.getElementById('date-1906').addEventListener("mouseout", function(){
@@ -386,8 +389,8 @@ function createSectionWatchers(timelineSlider){
     var d1851Watcher = scrollMonitor.create($('#1851'), 1);
     var d1871Watcher = scrollMonitor.create($('#1871'), 1);
     var d1876Watcher = scrollMonitor.create($('#1876'), 1);
+    var d1879Watcher = scrollMonitor.create($('#1879'), 1);
     var d1887Watcher = scrollMonitor.create($('#1887'), 1);
-    var d1897Watcher = scrollMonitor.create($('#1897'), 1);
     var d1906Watcher = scrollMonitor.create($('#1906'), 1);
 
     // Add watch events to move timeline to corresponding date  
@@ -436,14 +439,14 @@ function createSectionWatchers(timelineSlider){
     d1876Watcher.fullyEnterViewport(function () {
         slideToDate(1876, timelineSlider);
     });
+    d1879Watcher.fullyEnterViewport(function () {
+        slideToDate(1879, timelineSlider);
+    });
     
     d1887Watcher.fullyEnterViewport(function () {
         slideToDate(1887, timelineSlider);
     });
     
-    d1897Watcher.fullyEnterViewport(function () {
-        slideToDate(1897, timelineSlider);
-    });
     
     d1906Watcher.fullyEnterViewport(function () {
         slideToDate(1906, timelineSlider);
@@ -465,8 +468,8 @@ function removeSectionWatchers(){
     if(d1851Watcher != undefined){d1851Watcher.destroy();};
     if(d1871Watcher != undefined){d1871Watcher.destroy();};
     if(d1876Watcher != undefined){d1876Watcher.destroy();};
+    if(d1879Watcher != undefined){d1879Watcher.destroy();};
     if(d1887Watcher != undefined){d1887Watcher.destroy();};
-    if(d1897Watcher != undefined){d1897Watcher.destroy();};
     if(d1906Watcher != undefined){d1906Watcher.destroy();};
     
 }
@@ -544,9 +547,6 @@ function loadData(map, year){
         }
     });
 }
-
-//Moved
-
 
 // Function to process data
 function processData(data, map){
@@ -695,7 +695,8 @@ function createTimeline(map){
     if($(window).width()>=600){
 
     // Create slider for timeline
-    var timelineSlider = L.control.slider(function(value) {
+    // var timelineSlider = L.control.slider(function(value) {
+    timelineSlider = L.control.slider(function(value) {
         // Put function calls that use the slider value here
             updateLayerGroups(value);
             updateLegend(value);
@@ -719,7 +720,8 @@ function createTimeline(map){
         }).addTo(map);
     } else{
           // Create slider for timeline
-    var timelineSlider = L.control.slider(function(value) {
+    // var timelineSlider = L.control.slider(function(value) {
+    timelineSlider = L.control.slider(function(value) {
         // Put function calls that use the slider value here
             updateLayerGroups(value);
             updateLegend(value);
@@ -763,7 +765,6 @@ function updateDatePlacement() {
     // Variables for the math of calculating the position along the timeline
     var slideSelectorHeight = 15;
     var timelineHeight = (Number(document.getElementById("timelineSlider").style.width.split("px")[0]))-slideSelectorHeight;
-    console.log(timelineHeight);
     var numYears = 1906-1775;
     var timelineOffsetHeight = 3.75; //1/4 slideSelectorHeight
     var yearPerPx = timelineHeight/numYears;
@@ -780,8 +781,8 @@ function updateDatePlacement() {
     document.getElementById('date-1851-').style.top = ((1851-1775)*yearPerPx+timelineOffsetHeight) + 'px';
     document.getElementById('date-1871-').style.top = ((1871-1775)*yearPerPx+timelineOffsetHeight) + 'px';
     document.getElementById('date-1876-').style.top = ((1876-1775)*yearPerPx+timelineOffsetHeight) + 'px';
+    document.getElementById('date-1879-').style.top = ((1879-1775)*yearPerPx+timelineOffsetHeight) + 'px';
     document.getElementById('date-1887-').style.top = ((1887-1775)*yearPerPx+timelineOffsetHeight) + 'px';
-    document.getElementById('date-1897-').style.top = ((1897-1775)*yearPerPx+timelineOffsetHeight) + 'px';
     document.getElementById('date-1906-').style.top = ((1906-1775)*yearPerPx+timelineOffsetHeight) + 'px';
 }
 
@@ -872,7 +873,7 @@ function createLegend(map){
                 $(container).append('<div id="temporal-legend">')
                 //Start attribute legend div string to further be manipulated below 
                 var div = L.DomUtil.create('div', 'attribute-legend');
-                    categories = ['Native Land','Searched Native Land'];
+                    categories = ['Native Land','Highlighted Native Land'];
                     symbols=['images/NativeLand.svg','images/SelectedTribe.svg',]
                 //Iterate through the symbols
                 for (var i = 0; i < symbols.length; i++) {
@@ -892,9 +893,13 @@ function updateLegend(value){
     if(value==1775){
         var content = '<p id=legend-title><strong>Year: '+ value + '<br>' + ' Approximate Land Lost: ' +  0 + '%'
         '</strong></p>'
-    } else{
-	var content = '<p id=legend-title><strong>Year: '+ value + '<br>' + ' Approximate Land Lost: ' +  parseInt((landLost-landGained)/(area)*(100)) + '%'
-    '</strong></p>'}
+    }
+    if(value==1906){
+        var content = '<p id=legend-title><strong>Year: 2010 ' + '<br>' + ' Approximate Land Lost: ' +  parseInt((landLost-landGained)/(area)*(100)) + '%'
+        '</strong></p>'}
+    else{
+        var content = '<p id=legend-title><strong>Year: '+ value + '<br>' + ' Approximate Land Lost: ' +  parseInt((landLost-landGained)/(area)*(100)) + '%'
+        '</strong></p>'}
 	//Replace legend content with updated content
 	$('#temporal-legend').html(content);
 };   

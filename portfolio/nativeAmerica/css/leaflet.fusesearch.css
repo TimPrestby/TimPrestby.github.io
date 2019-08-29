@@ -95,9 +95,11 @@
     background-position: 1px 1px;
     display: inline-block;
     position: relative;
-    top: 4px;
-    width: 22px;
-    height: 22px;
+    top: 12px;
+    width:22px;
+    height: 21px;
+    left:4px;
+   
 }
 
 .leaflet-fusesearch-panel .search-input {

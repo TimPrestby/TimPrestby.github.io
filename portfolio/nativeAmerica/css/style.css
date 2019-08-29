@@ -191,6 +191,10 @@ a:hover{
 
 }
 
+.unindent{
+    text-indent: 0 !important
+}
+
 article.container {
   background: #414142;
   color: #f7f5f5;
@@ -311,12 +315,12 @@ article.container {
     top: 75.3vh;
 }
 
-#date-1887-{
-    top: 83.5vh;
+#date-1879-{
+    top: 77.5vh;
 }
 
-#date-1897-{
-    top: 90.9vh;
+#date-1887-{
+    top: 83.5vh;
 }
 
 #date-1906-{
