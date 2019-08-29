@@ -548,7 +548,7 @@ function loadData(map, year){
     });
 }
 
-// Function to process data
+// Function to process data //
 function processData(data, map){
     var myStyle = {
         "color": "#dddddd",
