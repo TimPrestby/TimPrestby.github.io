@@ -354,7 +354,7 @@ L.Control.FuseSearch = L.Control.extend({
                 // Create the title and add it to the div
                 titleDiv = document.createElement('div');
                 titleDiv.className ='selection-list-title';
-                titleDiv.innerHTML = "Highlighted Nation(s):";
+                titleDiv.innerHTML = "Selected Nation(s):";
                 selectionContainer.appendChild(titleDiv);
                 
                 // Create the Clear All item
