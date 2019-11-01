@@ -15,7 +15,7 @@ html, body {
     overflow: hidden;
     display: block;
     position: relative;
-    padding-bottom: 12vh; /* height of your footer */
+    padding-bottom: 17vh; /* height of your footer */
 }
 
 p {
@@ -310,7 +310,7 @@ footer div {
     }
 
     header {
-        margin-bottom: 22.5vh;
+        margin-bottom: 20vh;
     }
 
     p{
@@ -377,7 +377,7 @@ footer div {
     }
 
     header {
-        margin-bottom: 20vh;
+        margin-bottom: 17.5vh;
     }
     
     .selfie {
@@ -396,7 +396,7 @@ footer div {
     }
 
     header {
-        margin-bottom: 12.5vh;
+        margin-bottom: 15vh;
     }
 
     .nav{
