@@ -7,7 +7,8 @@ html{
 html, body {
     position: relative;
     height: 100%;
-    background-color: whitesmoke;
+    background-color: #222222;
+    color: white;
 }
 
 .mainContainer {
@@ -42,7 +43,7 @@ p {
 
  /*//////////////// Shadow Styles for ABOUT ////////////////*/
  .elegantshadow {
-    color: #131313;
+    color: white;
     letter-spacing: .25em;
     text-shadow: 
       1px -1px 0 #767676, 
@@ -184,6 +185,11 @@ a:hover{
 }
 
 /*//////////////// Header Styles ////////////////*/
+#topHeader{
+top: 0;
+background-color: #222222;
+height:5vh;
+}
 
 .vl {
     border-left: thick solid white;
@@ -195,7 +201,7 @@ a:hover{
 .fixed{
     position: Fixed;
     top:0;
-    background-image: linear-gradient(to bottom right, black, #A9A9A9		);;
+    background-color: #0A0A0A ;
     width: 100%;
     z-index: 1;
 
@@ -246,7 +252,7 @@ footer a {
 }
 footer{
     color:rgba(255, 255, 255, 0.856);
-    background-image: linear-gradient(to bottom left, black, #A9A9A9);
+    background-color: #0A0A0A ;
     bottom: 0;
     position: absolute;
     width: 100%;
