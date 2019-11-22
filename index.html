@@ -5,8 +5,7 @@
         <link rel="apple-touch-icon" sizes="180x180" href="lib/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="lib/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="lib/favicon-16x16.png">
-        <link rel="manifest" href="lib/site.webmanifest">
-        <title>Tim Prestby: Cartography</title>
+        <title>Tim's Portfolio</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,147 +14,213 @@
         <link rel="stylesheet" href="css/style.css">
      <!--Fonts:-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Bitter&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     </head>
 
 <body>
 
-    <div class="mainContainer">
-
-        <header role="banner">
-            <div class="stickyContainer fixed" id="topHeader"> 
+    <section id="cover">
+        <div class="coverContainer">
+            <h1>Welcome, I'm Tim  <br></h1>
+            <h2>I study and make maps</h2>
+            
+            <div class="arrow">
+                <a href='#intro'>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
             </div>
-
-            <div class="stickyContainer fixed"> 
-                <div class='row'>
-                    <div class="col-md-9 title">
-                        <div>
-                            <h1 class="text-uppercase">Tim Prestby</h1>
-                            <h5>Cartographer, Geographer, Web Designer</h5> 
-                        </div>
-                    </div>  
-                    <div class="colOne vl col-md-1">
-                    </div>
-                    <div class="col-md-2 nav">
-                        <nav> 
-                            <a href=lib/CV.pdf target="_blank">CV</a>
-                            <a class="currentPage" href=index.html>PORTFOLIO</a>
-                            <a href=about.html>ABOUT</a>  
-                        </nav>
-                    </div>
-                </div>        
-            </div>  
-        </header>
-
-        <div class="portfolio-grid row"> 
-            <a href="portfolio/bikability.pdf" class="cover-hover col-xl-4 col-lg-6 col-md-6">
-                <img src="Images/portfolio/BikabilitySmall.png">
-                <div class="cover">
-                    <div class="cover-container">
-                        <div class="cover-text">
-                            Bicycles in America 
-                        </div>
-                        <div class="info-text">
-                            Illustrator, ArcGIS
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <a href="portfolio/nativeAmerica/index.html" class="cover-hover col-xl-4 col-lg-6 col-md-6">
-                <img src="Images/portfolio/nativeAmerica.PNG">
-                <div class="cover">
-                    <div class="cover-container">
-                        <div class="cover-text">
-                            Remembering Native America 
-                        </div>
-                        <div class="info-text">
-                            jQuery, Leaflet
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="portfolio/beeAware.pdf" class="cover-hover col-xl-4 col-lg-6 col-md-6">
-                <img src="Images/portfolio/beeAware.PNG">
-                <div class="cover">
-                    <div class="cover-container">
-                        <div class="cover-text">
-                            Bee Aware
-                        </div>
-                        <div class="info-text">
-                            Illustrator, Indiemapper
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="portfolio/neighborhoodIsolation.pdf" class="cover-hover col-xl-4 col-lg-6 col-md-6">
-                <img src="Images/portfolio/neighborhoodIsolation.PNG">
-                <div class="cover">
-                    <div class="cover-container">
-                        <div class="cover-text">
-                            Milwaukee: Segregated Isolation 
-                        </div>
-                        <div class="info-text">
-                            QGIS, Python
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="portfolio/FallBayfield.png" class="cover-hover col-xl-4 col-lg-6 col-md-6">
-                <img src="Images/portfolio/FallBayfield.png">
-                <div class="cover">
-                    <div class="cover-container">
-                        <div class="cover-text">
-                            Fall in Love With Bayfield Peninsula 
-                        </div>
-                        <div class="info-text">
-                            Photoshop, Hillshade 
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <a href="portfolio/votesFunding.pdf" class="cover-hover col-xl-4 col-lg-6 col-md-6">
-                <img src="Images/portfolio/votesFunding.PNG">
-                <div class="cover">
-                    <div class="cover-container">
-                        <div class="cover-text">
-                            Funding Votes in the 2016 Presidential Election 
-                        </div>
-                        <div class="info-text">
-                            Illustrator, Excel
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-
         
         </div>
+    </section>
 
+    <div class="mainContainer" id="intro">
+        <!--HEADER-->
+        <header>
+            <nav class="navbar navbar-expand" >
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav" id="largerDevices">
+                        <a class="nav-link active" id="padLeft" href="index.html">PORTFOLIO</a>
+                        <a class="nav-link" href="about.html">ABOUT</a>
+                        <!--<a class="nav-link" href="resume.html">RESUME</a> -->
+                    </div>
+                    <div class="navbar-nav" id="mobileDevices">
+                        <a class="nav-link active" href="index.html"><i class="fas fa-briefcase fa-2x"></i>
+                            <span>PORTFOLIO</span>
+                        </a>
+                        <a class="nav-link" href="about.html"><i class="fas fa-user-alt fa-2x"></i>
+                            <span>ABOUT</span>
+                        </a>
+                        <!--<a class="nav-link" href="resume.html"><i class="fas fa-file fa-2x"></i>
+                            <span>RESUME</span>
+                        </a> -->
+                    </div>
+                </div>     
+ 
+            </nav>
+        </header>
+        
+        <!--PORTFOLIO-->
+        <div class="contentContainer">
+            <div class="row">
+
+
+                <!--Column 1-->
+                <div class="column">
+                       <div class="item">
+                            <a href="portfolio/bikability.pdf" class="cover-hover">
+                                <div class="thumbnail">
+                                    <img src="Images/portfolio/Bike.png">
+                                    <div class="cover">
+                                        <div class="cover-container">
+                                            <div class="cover-text">
+                                               <p> Bicycles in America 
+                                            </div>
+                                            <div class="info-text">
+                                                Illustrator, ArcGIS
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                            </a>
+                       </div>
+
+                       <div class="item">
+                            <a href="portfolio/nativeAmerica/index.html" class="cover-hover">
+                                <div class="thumbnail">
+                                    <img src="Images/portfolio/nativeAmerica.PNG">
+                                    <div class="cover">
+                                        <div class="cover-container">
+                                            <div class="cover-text">
+                                             <p>   Remembering Native America 
+                                            </div>
+                                            <div class="info-text">
+                                                jQuery, Leaflet
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                       </div>
+
+                       <div class="item">
+                            <a href="portfolio/beeAware.pdf" class="cover-hover">
+                                <div class="thumbnail">
+
+                                    <img src="Images/portfolio/bees.PNG">
+                                    <div class="cover">
+                                        <div class="cover-container">
+                                        <div class="cover-text">
+                                          <p>  Bee Aware
+                                        </div>
+                                        <div class="info-text">
+                                            Illustrator, Indiemapper
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                       </div>
+
+            
+
+                </div>
+    
+                <!--Column 2-->
+                <div id="portfolio" class="column">
+                        <div class="item">
+                            <a href="portfolio/neighborhoodIsolation.pdf" class="cover-hover">
+                                <div class="thumbnail">
+                                    <img src="Images/portfolio/MKE.PNG">
+                                    <div class="cover">
+                                        <div class="cover-container">
+                                            <div class="cover-text">
+                                               <p> Milwaukee: Segregated Isolation 
+                                            </div>
+                                            <div class="info-text">
+                                                QGIS, Python
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="portfolio/FallBayfield.png" class="cover-hover">
+                                <div class="thumbnail">
+                                    <img src="Images/portfolio/FallBayfield.png">
+                                    <div class="cover">
+                                        <div class="cover-container">
+                                            <div class="cover-text">
+                                                <p>Fall in Love With Bayfield Peninsula 
+                                            </div>
+                                            <div class="info-text">
+                                                Photoshop, Hillshade 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="portfolio/votesFunding.pdf" class="cover-hover">
+                                <div class="thumbnail">
+                                    <img src="Images/portfolio/votes.PNG">
+                                    <div class="cover">
+                                        <div class="cover-container">
+                                            <div class="cover-text">
+                                                <p>Funding Votes in the 2016 Presidential Election 
+                                            </div>
+                                            <div class="info-text">
+                                                Illustrator, Excel
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        
+                </div>
+
+            </div>
+        
+
+        </div>
+
+        <div class="filler">
+        </div>
+        
     
         
-            
+         
             
         
         
         <!-- // Footer & contact info -->
         <footer>
 
-            <!-- Social media and contact links. Add or rstrongove any networks. -->
+            <!-- Social media and contact links. Add or remove any networks. -->
             <div class="text-center" role="contentinfo">
             
                 <a href="https://twitter.com/TimPrestby" target="_blank"><i class="fab fa-twitter fa-2x"></i><span class='sr-only'>Twitter</span></a>
                 <a href="https://www.linkedin.com/in/TimPrestby" target="_blank"><i class="fab fa-linkedin-in fa-2x"></i><span class='sr-only'>Linkedin</span></a>
                 <a href="https://github.com/TimPrestby" target="_blank"> <i class="fab fa-github fa-2x"></i><span class='sr-only'>GitHub</span></a>
                 <a href="mailto:tjprestby@gmail.com"><i class="fas fa-envelope-open fa-2x"></i><span class='sr-only'>strongail</span></a>
-                <p class="padBot"><i class="fas fa-copyright"></i></i><span class='sr-only'></span> 2019 Timothy Prestby</p>
+                <p><i class="fas fa-copyright"></i></i><span class='sr-only'></span> 2019 Timothy Prestby</p>
             </div>
             <!--because this is a div, the entire thing is treated as a block with individual inline objects as the links-->
             
         
         </footer>
     </div>
+    <script type="text/javascript" src="js/jquery.slim.js"></script>
+    <script type="text/javascript" src="js/scrollMonitor.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
 </body>
 </html>

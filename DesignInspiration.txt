@@ -10,3 +10,9 @@ https://startbootstrap.com/snippets/full-image-background/
 
 Dots as progress
 https://codyhouse.co/gem/vertical-fixed-navigation/
+
+Arrow
+https://codepen.io/raf187/pen/BvgGRQ
+
+Cover example
+https://bootstrapmade.com/demo/Regna/

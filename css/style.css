@@ -1,123 +1,78 @@
-/*//////////////////// Global Styles ////////////////*/
-
-html{
-    font-size: 1rem !important;
-}
-
 html, body {
-    position: relative;
-    height: 100%;
-    background-color: #222222;
+    background-color: #080808 !important;
     color: white;
+    font-family: 'Ubuntu', sans-serif !important;
+    scroll-behavior: smooth;
+
 }
 
-.mainContainer {
-    min-height: 100vh; /* will cover the 100% of viewport */
-    overflow: hidden;
-    display: block;
-    position: relative;
-    padding-bottom: 17vh; /* height of your footer */
+p, h5 {
+    font-family: 'Bitter', serif;
 }
 
-p {
-    font-family: 'Open Sans', sans-serif !important;
-    font-size: 1.25rem;
+
+
+
+/*/////////////////// Nav Styles ///////////////////*/
+
+nav{
+    visibility: hidden;
 }
- body {
-     font-family: 'Ubuntu', sans-serif !important;
-     margin:0;
-     padding:0;
-
- }
-
- .aboutContent {
-    position: relative;
-    z-index: 0;
-
- }
-
- .currentPage{
-     text-decoration: underline; 
- }
-
-
- /*//////////////// Shadow Styles for ABOUT ////////////////*/
- .elegantshadow {
+.nav-link{
     color: white;
-    letter-spacing: .25em;
-    text-shadow: 
-      1px -1px 0 #767676, 
-      -1px 2px 1px #737272, 
-      -2px 4px 1px #767474, 
-      -3px 6px 1px #787777, 
-      -4px 8px 1px #7b7a7a, 
-      -5px 10px 1px #7f7d7d, 
-      -6px 12px 1px #828181, 
-      -7px 14px 1px #868585, 
-      -8px 16px 1px #8b8a89, 
-      -9px 18px 1px #8f8e8d, 
-      -10px 20px 1px #949392, 
-      -11px 22px 1px #999897, 
-      -12px 24px 1px #9e9c9c, 
-      -13px 26px 1px #a3a1a1, 
-      -14px 28px 1px #a8a6a6, 
-      -15px 30px 1px #adabab, 
-      -16px 32px 1px #b2b1b0, 
-      -17px 34px 1px #b7b6b5, 
-      -18px 36px 1px #bcbbba, 
-      -19px 38px 1px #c1bfbf, 
-      -20px 40px 1px #c6c4c4, 
-      -21px 42px 1px #cbc9c8, 
-      -22px 44px 1px #cfcdcd, 
-      -23px 46px 1px #d4d2d1, 
-      -24px 48px 1px #d8d6d5, 
-      -25px 50px 1px #dbdad9, 
-      -26px 52px 1px #dfdddc, 
-      -27px 54px 1px #e2e0df, 
-      -28px 56px 1px #e4e3e2;
-      text-rendering: optimizeLegibility;
-      padding-left: 30px;
-  }
-
-
-
-
-/*//////////////// About Page Styles ////////////////*/
-
- .about {
-     padding-right: 5vw;
-     padding-top: 5vh;
- }
-
-
-
- /*//////////////// Portfolio Styles ////////////////*/
-
-.portfolio-grid{
-    margin-left: 2vw;
-    margin-right: 2vw;
+    padding-right: 2em !important;
+    padding-left: 0 !important;
+}
+.nav-link:hover{
+    color: #8A2BE2;
+}
+.active{
+    color: #8A2BE2;
+}
+.active:hover{
+    color:white;
 }
 
- div.portfolio-grid a {
-    position: relative;
-    width: 450px;
-    padding: 0.5%;
+@keyframes smoothNav {
+    0% {
+      transform: translateX(50vw); } }
+
+.fixed{
+    bottom: inherit;
+    left: 0;
+    position: fixed;
+    width: 100vw;
+    background-color: #080808;
+    animation: smoothNav 1s;
+    visibility: visible;
+    z-index: 200;
 }
 
-
-div.portfolio-grid.row {
-    margin-top: 12.5px;
-    align-items: stretch;
+header{
+    margin-bottom: 15vh;
 }
 
-div.portfolio-grid img {
+/*///////////////PORTFOLIO///////////////*/
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 20;
+    margin: 0px !important;
+}
+
+.column img{
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    box-shadow: 3px 3px 3px #aaa;
-    vertical-align: middle;
+    box-shadow: 0 0 3px 2px #8A2BE2;
 }
+
+.thumbnail {
+    padding: 0px !important;
+    border: none;
+    border-radius: 0;
+    display: block;
+    position: relative;
+    
+  }
 
 .cover {
     position: absolute;
@@ -125,12 +80,13 @@ div.portfolio-grid img {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(85, 85, 85, 0.8);
+    background-color: rgba(2, 2, 2, 0.445);
     opacity: 0;
     width: 100%;
     height: 100%;
     transition: .7s ease;
     display: table;
+
 }
 
 .cover-container{
@@ -142,322 +98,390 @@ div.portfolio-grid img {
 .cover-text {
     position: relative;
     padding-left: 1vw;
-    font-size: 4vw;
+    font-size: 2vw;
     color: #ededed;
     text-align: center;
-    border-bottom-style: double;
+    border-bottom-style: solid;
     border-color: white;
     line-height: 1em;
-
-    
-    
 }
 
 .info-text{
     position: relative;
     padding-left: 1vw;
-    font-size: 2.5vw;
+    font-size: 1.5vw;
     color: #ededed;
     text-align: center;
+    margin-top: 7px;
 
+}
+
+.cover-text p{
+    margin-bottom: 10px;
 }
 
 .cover-hover:hover .cover{
     opacity: 1;
 }
 
-/*//////////////// Link Styles ////////////////*/
-
- nav a {
-     color:rgb(255, 255, 255);
-     font-size: 1em;
-     font-weight: bold;
- }
-
-a:hover{
-    color:rgb(218, 216, 216) !important;
-    text-decoration: none;
+.item{
+    margin-top: 20px !important;
 }
 
-a:hover{
-    color:rgb(46, 46, 46) !important;
-    text-decoration: none;
-}
 
-/*//////////////// Header Styles ////////////////*/
-#topHeader{
-top: 0;
-background-color: #222222;
-height:5vh;
-}
 
-.vl {
-    border-left: thick solid white;
-    margin-top: 5px !important;
-    margin-bottom: 5px !important;
-    border-radius: 3px;
-}
 
-.fixed{
-    position: Fixed;
-    top:0;
-    background-color: #0A0A0A ;
-    width: 100%;
-    z-index: 1;
 
-}
-
-.stickyContainer {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+/*///////////////ABOUT///////////////*/
+.selfie {
+    max-height: 100%;
+    max-width:100%;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
     margin-right: auto;
-    margin-left: 0;
+    z-index: 1;
+    position: relative;
 }
 
-header {
-    color:rgb(138, 136, 136);
-    margin-top:20px;
+#selfieDiv{
+    padding-left: 0 !important;
 }
 
-header h1 {
-    letter-spacing: 1.25rem;
-    color:white;
-}
+@keyframes smoothLeft {
+    0% {
+      transform: translateX(-100vw); } }
 
-header h5 {
-    color:rgb(192, 192, 192);
-    font-size: 1.1rem;
-}
 
-.nav {
-    letter-spacing: .125rem;
-}
-
-.title{
-    padding-left: 5vw;
-    padding-right: 15vw;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
-
+.headerBar {
+    margin: 25px 0 25px 0;
+    width: 300px;
+    height: 4px;
+    background: #8A2BE2;
+    animation: smoothLeft 1s;
+    z-index: -100 !important;
 }
 
 
-/*//////////////// Footer Styles ////////////////*/
+/*///////////////RESUME///////////////*/
 
-footer a {
-    color:rgb(255, 255, 255);
-    margin: 1em;
-
+.resumeHeader {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
-footer{
-    color:rgba(255, 255, 255, 0.856);
-    background-color: #0A0A0A ;
-    bottom: 0;
-    position: absolute;
+
+.year{
+    padding-left: 0 !important;
+}
+
+ul{
+    padding-left: 1.1rem;
+}
+
+.lastList{
+    margin-bottom: 0;
+}
+
+.resume p, h5{
+    margin-bottom: 0;
+}
+
+div .noPad strong{
+text-decoration: underline;
+font-weight: normal;
+}
+
+.pub{
+    margin-bottom: 1rem !important;
+}
+
+.noPad{
+    padding: 0px !important;
+}
+
+#cv{
+    color: #8A2BE2;
+}
+
+#cv:hover{
+    color: white !important;
+}
+
+/*///////////////GLOBAL CLASSES/ID///////////////*/
+
+.mainContainer{
+}
+
+.filler{
+    height: 7.5vh;
+}
+
+#padLeft{
+    padding-left: .5vw !important;
+}
+
+
+
+
+/*/////////////////// Cover Styles ///////////////////*/
+#cover {
     width: 100%;
-    min-height: 11vh;
-}
-footer p {
-    padding-top: 10px;
-    font-size: .66em;
-    margin-bottom: 10px
+    height: 100vh;
+    background-size: cover;
+    position: relative;
 }
 
-footer div {
-    padding-top: 10px;
+#cover:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#cover .coverContainer {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+/*/////////////////// Arrow Styles ///////////////////*/
+
+
+.arrow{
+    position: absolute ;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.arrow span{
+    display: block;
+    width: 45px;
+    height: 45px;
+    border-bottom: 5px solid #8A2BE2;
+    border-right: 5px solid #8A2BE2;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 3s infinite;
+    border-radius: 5px;
+}
+.arrow span:nth-child(2){
+    animation-delay: -0.2s;
+}
+.arrow span:nth-child(3){
+    animation-delay: -0.4s;
+}
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-30px,-30px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(30px,30px);
+    }
+}
+
+/*///////////////FOOTER///////////////*/
+
+footer p{
+    margin-top: 3vh;
+    padding-top: 0px;
+    margin-bottom:0px;
+}
+
+footer {
+    padding-bottom: 5vh;
+}
+
+footer a{
+    margin: 1em;
+    color: white;
+}
+
+footer a:hover{
+    color: #8A2BE2;
 }
 
 
 /*//////////////// Responsive Styles ////////////////*/
 
+@media (min-width:1200px) {
 
-@media (max-width:576px) {
-
-    html {font-size: 1.0rem !important;
+    .contentContainer{
+        margin-left: 16.66vw;
+        margin-right: 16.66vw;
     }
 
-    .vl {
-        border-top: thick solid white;
-        margin-right:5vw;
+    .navbar-nav{
+        position: absolute;
+        left:16.66vw;
     }
 
-    .nav {
-        padding-top: 1vh;
-        padding-right: 15vw;
-        padding-bottom: 1vh;
-        padding-left: 5vw;
-        font-size: .8rem !important;
-    
-    }
-    
-    .title {
-        padding-right: 1vw !important;
-    }
-    .nav a {
-        padding-right: 4vw;
+    .column {
+        flex: 50%;
+        max-width: 50%;
+        padding: 0 .5vw;
     }
 
-    header h1 {
-        font-size: 1rem !important;
-        letter-spacing: 1.15rem !important;
+    nav{
+        border-bottom: 3px solid #8A2BE2;
+        letter-spacing: .5em; 
+        height: 5vh;
     }
 
-    header h5 {
-        font-size: .9rem !important;
+    .fixed{
+        top: 0;
     }
 
-    .colOne {
-        padding-top: 0px !important;
-        padding-bottom: 0px !important;
-        margin-top: 0px !important;
-        margin-bottom: 0px !important;
-    
+    #largerDevices{
+        display: inherit;
     }
 
-    header {
-        margin-bottom: 20vh;
+    #mobileDevices{
+        display:none;
     }
 
-    p{
-        margin-top: 5vh;
-        margin-left:3vw;
-        margin-right: 3vw;
-        font-size: 1rem !important;
-    }
-
-    .selfie {
-        max-height: 200px;
-        max-width:200px;
-        border-radius: 50%;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .elegantshadow {
-    text-align: center;
-
-    }
-    
-    footer{
-        height: 10vh;
-    }
-
-    footer p{
-        margin-top: 0px;
-        padding-top: 0px;
-        margin-bottom:0px;
-    }
-}
-
-
-@media (max-width:767px) and (min-width: 577px) {
-
-    html {font-size: 1.0rem !important;
-    }
-
-    .vl {
-        border-top: thick solid white;
-        margin-right:27.5vw;
-    }
-
-    .nav {
-        padding-top: 1vh;
-        padding-right: 15vw;
-        padding-bottom: 1vh;
-        padding-left: 5vw;
-    }
-    
-    .nav a {
-        padding-right: 9vw;
-    }
-
-
-    header h1 {
-        font-size: 2rem ;
-    }
-
-    header h5 {
-        font-size: 1.5rem !important;
-    }
-
-    header {
-        margin-bottom: 17.5vh;
-    }
-    
-    .selfie {
-        max-height: 250px;
-        max-width:250px;
-        padding-left: 1vw;
-        border-radius: 50%;
-    }
 
 }
-
 
 @media (min-width:768px) and (max-width: 1199px) {
-    html {
-    font-size: 1rem !important;
+
+    .contentContainer{
+        margin-left: 4.66vw;
+        margin-right: 4.66vw;
     }
 
-    header {
-        margin-bottom: 15vh;
+    .navbar-nav{
+        position: absolute;
+        left:4.66%;
     }
 
-    .nav{
-        padding-top: 1vh;
-        padding-right: 15vw;
-        padding-bottom: 1vh;
-        letter-spacing: .125rem;
-
+    .column {
+        flex: 50%;
+        max-width: 50%;
+        padding: 0 .75vw;
     }
 
-    .colOne{
-        padding-right:0;
+    nav{
+        border-bottom: 3px solid #8A2BE2;
+        letter-spacing: .25em; 
+        height: 5vh;
     }
 
-    header h1 {
-        font-size: 2rem !important;
+    .fixed{
+        top: 0;
+    }
+    
+    #largerDevices{
+        display: inherit;
     }
 
-    .selfie {
-        max-height: 250px;
-        max-width:250px;
-        padding-left: 1vw;
-        border-radius: 50%;
-    }
+    #mobileDevices{
+        display:none;
+    } 
 
-    p {
-        font-size: 1.75rem;
-    }
-
-    #lowPad {
-        padding-top: 10px;
-    }
 
 }
 
-@media (min-width:1200px) {
-    html {
-    font-size: 1.25rem !important;
+@media (max-width:767px){
+    .column {
+        flex: 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    @keyframes smoothNav {
+        0% {
+          transform: translateX(100vw); } }
+    
+
+    .fixed{
+        bottom: 0;
+        position: fixed;
+        width: 100%;
+        background-color: #080808;
+        animation: smoothNav 1s;
+        visibility: visible;
+        z-index: 100;
+    }
+    header{
+        margin-bottom: 5vh;
+    }
+
+    nav{
+        border-top: 3px solid #8A2BE2;
+    }
+
+    footer{
+        padding-bottom: 17.5vh;
+    }
+
+    .navbar-nav{
+        margin: auto;
+        
+    }
+
+    .nav-link{
+        padding: 1rem 8.5vw 1rem 8.5vw !important;
+        width: 50vw;
+    }
+
+    .navbar{
+        padding: 0;
+        width: 100vw;
+    }
+
+    #mobileDevices{
+        display: flex;
+    }
+
+    #largerDevices{
+        display: none;
+    }
+
+    nav i,span{
+        display: flex !important;
+        justify-content: center;
+    }
+    nav span{
+        padding-top: .5vh;
     }
     
-    header {
-        margin-bottom: 17.5vh;
+    .row {
+        padding: 0 20px !important;
     }
 
-    .nav {
-        padding-top: 2vh;
-        padding-right: 15vw;
-        padding-bottom: 1vh;
-        letter-spacing: .125rem;
+    .aboutHeader{
+        text-align: center;
+        margin-bottom: 2.5vh;
+
     }
 
-    .selfie {
-        max-height: 400px;
-        max-width:400px;
-        padding-left: 1vw;
-        border-radius: 50%;
+    .headerBar {
+    margin: auto !important;
+    width: 100px !important;
     }
+
+    #aboutP{
+        margin-top: 2.5vh;
+    }
+    .selfie{
+        margin-bottom: 2.5vh;
+    }
+
+    
+    
+
 }
