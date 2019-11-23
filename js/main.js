@@ -14,11 +14,13 @@ $(document).ready(function(){
 
   if(filename == "about.html"){
     $("nav").addClass('fixed');
-  } else{
+    
+  } else {
+
     //Create scroll monitor to change header//
     var introWatcher = scrollMonitor.create($('.arrow'), 1);
     introWatcher.exitViewport(function (){
-      $("nav").addClass('fixed');
+    $("nav").addClass('fixed');
     });
 
   }
