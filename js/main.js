@@ -12,15 +12,14 @@ $(document).ready(function(){
   var url = window.location.pathname;
   var filename = url.substring(url.lastIndexOf('/')+1);
 
-  if(filename == "index.html"){
+  if(filename == "about.html"){
+    $("nav").addClass('fixed');
+  } else{
     //Create scroll monitor to change header//
     var introWatcher = scrollMonitor.create($('.arrow'), 1);
-
     introWatcher.exitViewport(function (){
-        $("nav").addClass('fixed');
+      $("nav").addClass('fixed');
     });
-  } else{
-    $("nav").addClass('fixed');
 
   }
   //Animate skill chart
