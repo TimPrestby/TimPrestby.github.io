@@ -217,6 +217,11 @@ font-weight: normal;
     height: auto;
 }
 
+.bold{
+    font-weight: bold;
+    letter-spacing: .1rem;
+}
+
 
 /*///////////////GLOBAL CLASSES/ID///////////////*/
 
@@ -445,7 +450,7 @@ footer a:hover{
 
     .nav-link{
         padding: 1rem 8.5vw 1rem 8.5vw !important;
-        width: 50vw;
+        width: 33.33vw;
     }
 
     .navbar{
@@ -474,14 +479,12 @@ footer a:hover{
     }
 
     .aboutHeader{
-        text-align: center;
         margin-bottom: 2.5vh;
 
     }
 
     .headerBar {
-    margin: auto !important;
-    width: 100px !important;
+    width: 200px !important;
     }
 
     #aboutP{
