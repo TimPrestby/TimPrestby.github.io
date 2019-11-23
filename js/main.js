@@ -8,22 +8,22 @@ $(document).ready(function(){
     })
   }
 
-  //Determine the filename to trigger cover page
+  //Determine the filename for cover and to work
   var url = window.location.pathname;
   var filename = url.substring(url.lastIndexOf('/')+1);
+  var fullURL = window.location.href
 
-  if(filename == "about.html"){
-    $("nav").addClass('fixed');
-    
-  } else {
-
+  if(filename == "index.html" || fullURL == "timprestby.github.io"){
     //Create scroll monitor to change header//
     var introWatcher = scrollMonitor.create($('.arrow'), 1);
     introWatcher.exitViewport(function (){
     $("nav").addClass('fixed');
-    });
+  });
 
+  } else {
+    $("nav").addClass('fixed');
   }
+
 
 });
 

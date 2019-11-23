@@ -98,7 +98,7 @@ header{
 .cover-text {
     position: relative;
     padding-left: 1vw;
-    font-size: 2vw;
+    font-size: 2rem;
     color: #ededed;
     text-align: center;
     border-bottom-style: solid;
@@ -109,7 +109,7 @@ header{
 .info-text{
     position: relative;
     padding-left: 1vw;
-    font-size: 1.5vw;
+    font-size: 1.5rem;
     color: #ededed;
     text-align: center;
     margin-top: 7px;
@@ -207,6 +207,17 @@ font-weight: normal;
     color: white !important;
 }
 
+/*///////////////Project Pages///////////////*/
+.projectHeader{
+    font-size: 3rem;
+}
+
+.projectImg{
+    width: 100%;
+    height: auto;
+}
+
+
 /*///////////////GLOBAL CLASSES/ID///////////////*/
 
 .mainContainer{
@@ -258,7 +269,7 @@ font-weight: normal;
 
 .arrow{
     position: absolute ;
-    top: 80%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
@@ -392,7 +403,6 @@ footer a:hover{
         display:none;
     } 
 
-
 }
 
 @media (max-width:767px){
@@ -479,6 +489,17 @@ footer a:hover{
     }
     .selfie{
         margin-bottom: 2.5vh;
+    }
+
+    #cover h1, h2{
+        font-size: 1.75rem !important;
+    }
+
+    .cover-text{
+        font-size: 2rem;
+    }
+    .info-text{
+        font-size: 1.5rem;
     }
 
     
