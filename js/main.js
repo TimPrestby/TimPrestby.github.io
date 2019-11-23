@@ -11,7 +11,6 @@ $(document).ready(function(){
   //Determine the filename for cover and to work
   var url = window.location.pathname;
   var filename = url.substring(url.lastIndexOf('/')+1);
-  var fullURL = window.location.href
 
   if(filename == "index.html" || filename == "" || filename == "index.html#intro" ){
     //Create scroll monitor to change header//
