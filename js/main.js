@@ -12,7 +12,7 @@ $(document).ready(function(){
   var url = window.location.href;
   var filename = url.substring(url.lastIndexOf('/')+1);
 
-  if(filename == "index.html" || url == "https://timprestby.github.io/" || end == "https://timprestby.github.io/index"){
+  if(filename == "index.html" || url == "https://timprestby.github.io/" || url == "https://timprestby.github.io/index"){
     //Create scroll monitor to change header//
     var introWatcher = scrollMonitor.create($('.arrow'), 1);
     introWatcher.exitViewport(function (){
