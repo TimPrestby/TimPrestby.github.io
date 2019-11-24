@@ -144,10 +144,6 @@ header{
     position: relative;
 }
 
-#selfieDiv{
-    padding-left: 0 !important;
-}
-
 @keyframes smoothLeft {
     0% {
       transform: translateX(-100vw); } }
@@ -160,6 +156,10 @@ header{
     background: #fd4908;
     animation: smoothLeft 1s;
     z-index: -100 !important;
+}
+
+.portrait{
+    height: 100% !important;
 }
 
 
@@ -552,7 +552,9 @@ footer a:hover{
         padding-left: 0;
     }
 
-
+    #selfieDiv{
+        padding-left: 0 !important;
+    }
     
     
 
