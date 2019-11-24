@@ -24,6 +24,5 @@ $(document).ready(function(){
     $("nav").addClass('fixed');
   }
 
-
 });
 
