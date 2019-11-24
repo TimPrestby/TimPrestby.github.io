@@ -10,8 +10,9 @@ $(document).ready(function(){
 
   //Determine the filename for cover to work
   var url = window.location.href;
+  var filename = url.substring(url.lastIndexOf('/')+1);
 
-  if(url == "https://timprestby.github.io/" || end == "https://timprestby.github.io/index"){
+  if(filename == "index.html" || url == "https://timprestby.github.io/" || end == "https://timprestby.github.io/index"){
     //Create scroll monitor to change header//
     var introWatcher = scrollMonitor.create($('.arrow'), 1);
     introWatcher.exitViewport(function (){
