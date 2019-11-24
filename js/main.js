@@ -6,7 +6,7 @@ $(document).ready(function(){
     document.querySelector('#intro').scrollIntoView({ 
         behavior: 'smooth' 
     })
-  }
+  };
 
   //Determine the filename for cover to work
   var url = window.location.href;
