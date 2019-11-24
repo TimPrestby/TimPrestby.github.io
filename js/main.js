@@ -6,13 +6,14 @@ $(document).ready(function(){
     document.querySelector('#intro').scrollIntoView({ 
         behavior: 'smooth' 
     })
-  };
+  }
 
   //Determine the filename for cover and to work
   var url = window.location.pathname;
   var filename = url.substring(url.lastIndexOf('/')+1);
+  var fullURL = window.location.href
 
-  if(filename == "index.html" || filename === "undefined" || filename == "index.html#intro" ){
+  if(filename == "index.html" || fullURL == "https://timprestby.github.io" ){
     //Create scroll monitor to change header//
     var introWatcher = scrollMonitor.create($('.arrow'), 1);
     introWatcher.exitViewport(function (){
@@ -22,6 +23,7 @@ $(document).ready(function(){
   } else {
     $("nav").addClass('fixed');
   }
+
 
 });
 
