@@ -222,6 +222,24 @@ font-weight: normal;
     letter-spacing: .1rem;
 }
 
+iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.maxDiv{
+    width: 100%;
+    height: 90vh;
+}
+
+.boxImg{
+    margin-top: 1rem !important;
+}
+
+.created{
+    margin-bottom: 2rem !important;
+}
+
 
 /*///////////////GLOBAL CLASSES/ID///////////////*/
 
@@ -375,6 +393,18 @@ footer a:hover{
         display:none;
     }
 
+    .col-xl-3 div{
+        position: absolute;
+        top:50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    
+    .col-xl-3{
+        position: relative;
+    }
+    
+
 
 }
 
@@ -413,6 +443,12 @@ footer a:hover{
     #mobileDevices{
         display:none;
     } 
+    
+    .col-xl-3{
+        padding-left: 0;
+        padding-top: 1rem;
+    }
+ 
 
 }
 
@@ -507,9 +543,15 @@ footer a:hover{
     .cover-text{
         font-size: 2rem;
     }
+
     .info-text{
         font-size: 1.5rem;
     }
+
+    .col-xl-3{
+        padding-left: 0;
+    }
+
 
     
     
