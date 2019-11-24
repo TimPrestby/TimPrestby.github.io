@@ -11,9 +11,10 @@ $(document).ready(function(){
   //Determine the filename for cover and to work
   var url = window.location.pathname;
   var filename = url.substring(url.lastIndexOf('/')+1);
-  var fullURL = window.location.href
+  var end = url.substring(url.lastIndexOf('.')+1);
 
-  if(filename == "index.html" || fullURL == "https://timprestby.github.io/"){
+
+  if(filename == "index.html" || end == "io"){
     //Create scroll monitor to change header//
     var introWatcher = scrollMonitor.create($('.arrow'), 1);
     introWatcher.exitViewport(function (){
