@@ -5,6 +5,8 @@
         <link rel="apple-touch-icon" sizes="180x180" href="lib/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="lib/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="lib/favicon-16x16.png">
+        <link rel="manifest" href="lib/site.webmanifest">
+
         <title>Tim's Portfolio</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,7 +28,7 @@
             <h2>I make and study maps</h2>
             
             <div class="arrow">
-                <a href='#intro'>
+                <a href='#anchor'>
                     <span></span>
                     <span></span>
                     <span></span>
@@ -35,6 +37,8 @@
         
         </div>
     </section>
+    <div id='anchor'>
+    </div>
 
     <div class="mainContainer" id="intro">
         <!--HEADER-->
@@ -42,10 +46,14 @@
             <nav class="navbar navbar-expand" >
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav" id="largerDevices">
-                        <a class="nav-link active" id="padLeft" href="index.html#intro">Portfolio</a>
+                        <a class="nav-link active" href="index.html#anchor">Portfolio</a>
                         <a class="nav-link" href="about.html">About</a>
                         <a class="nav-link" href="resume.html">Resume</a>
                     </div>
+                    <div class="brand">
+                        <h5>Timothy Prestby</h5>
+                    </div>
+
                     <div class="navbar-nav" id="mobileDevices">
                         <a class="nav-link active" href="index.html#cover">
                             <span>Portfolio</span>
@@ -68,7 +76,7 @@
 
 
                 <!--Column 1-->
-                <div class="column">
+                <div class="column" id="colLeft">
                        <div class="item">
                             <a href="projects/bike.html" class="cover-hover">
                                 <div class="thumbnail">
@@ -125,12 +133,31 @@
                             </a>
                        </div>
 
+                       <div class="item">
+                            <a href="projects/tron.html" class="cover-hover">
+                                <div class="thumbnail">
+
+                                    <img src="Images/Portfolio/tron.PNG">
+                                    <div class="cover">
+                                        <div class="cover-container">
+                                        <div class="cover-text">
+                                          <p>  Tron
+                                        </div>
+                                        <div class="info-text">
+                                            Mapbox Studio
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                       </div>
+
             
 
                 </div>
     
                 <!--Column 2-->
-                <div id="Portfolio" class="column">
+                <div class="column" id="colRight">
                         <div class="item">
                             <a href="projects/mke.html" class="cover-hover">
                                 <div class="thumbnail">
@@ -208,7 +235,6 @@
                 <a href="https://twitter.com/TimPrestby" target="_blank"><i class="fab fa-twitter fa-2x"></i><span class='sr-only'>Twitter</span></a>
                 <a href="https://www.linkedin.com/in/TimPrestby" target="_blank"><i class="fab fa-linkedin-in fa-2x"></i><span class='sr-only'>Linkedin</span></a>
                 <a href="https://github.com/TimPrestby" target="_blank"> <i class="fab fa-github fa-2x"></i><span class='sr-only'>GitHub</span></a>
-                <a href="mailto:tjprestby@gmail.com"><i class="fas fa-envelope-open fa-2x"></i><span class='sr-only'>strongail</span></a>
                 <p><i class="fas fa-copyright"></i></i><span class='sr-only'></span> 2019 Timothy Prestby</p>
             </div>
             <!--because this is a div, the entire thing is treated as a block with individual inline objects as the links-->
