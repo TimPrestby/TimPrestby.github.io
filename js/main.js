@@ -8,6 +8,7 @@ $(document).ready(function(){
     })
   };
 
+
   //Determine the filename for cover to work
   var url = window.location.href;
   var filename = url.substring(url.lastIndexOf('/')+1);

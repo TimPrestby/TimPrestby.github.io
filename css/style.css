@@ -24,18 +24,15 @@ nav{
     padding-left: 0 !important;
 }
 .nav-link:hover{
-    color: #fd4908;
+    color: #AA3911;
 }
 .active{
-    color: #fd4908;
+    color: #AA3911;
 }
 .active:hover{
     color:white;
 }
 
-@keyframes smoothNav {
-    0% {
-      transform: translateX(50vw); } }
 
 .fixed{
     bottom: inherit;
@@ -43,7 +40,6 @@ nav{
     position: fixed;
     width: 100vw;
     background-color: #080808;
-    animation: smoothNav 1s;
     visibility: visible;
     z-index: 200;
 }
@@ -52,7 +48,8 @@ header{
     margin-bottom: 15vh;
 }
 
-/*///////////////PORTFOLIO///////////////*/
+
+/*///////////////Portfolio///////////////*/
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -62,7 +59,7 @@ header{
 
 .column img{
     width: 100%;
-    box-shadow: 0 0 3px 2px #fd4908;
+    box-shadow: 0 0 3px 2px #AA3911;
 }
 
 .thumbnail {
@@ -153,7 +150,7 @@ header{
     margin: 25px 0 25px 0;
     width: 300px;
     height: 4px;
-    background: #fd4908;
+    background: #AA3911;
     animation: smoothLeft 1s;
     z-index: -100 !important;
 }
@@ -200,7 +197,7 @@ font-weight: normal;
 }
 
 .link{
-    color: #fd4908;
+    color: #AA3911;
 }
 
 .link:hover{
@@ -351,7 +348,7 @@ footer a{
 }
 
 footer a:hover{
-    color: #fd4908;
+    color: #AA3911;
 }
 
 
@@ -376,7 +373,7 @@ footer a:hover{
     }
 
     nav{
-        border-bottom: 3px solid #fd4908;
+        border-bottom: 3px solid #AA3911;
         letter-spacing: .5em; 
         height: 5vh;
     }
@@ -427,7 +424,7 @@ footer a:hover{
     }
 
     nav{
-        border-bottom: 3px solid #fd4908;
+        border-bottom: 3px solid #AA3911;
         letter-spacing: .25em; 
         height: 5vh;
     }
@@ -459,9 +456,6 @@ footer a:hover{
         padding: 0;
     }
 
-    @keyframes smoothNav {
-        0% {
-          transform: translateX(100vw); } }
     
 
     .fixed{
@@ -469,7 +463,6 @@ footer a:hover{
         position: fixed;
         width: 100%;
         background-color: #080808;
-        animation: smoothNav 1s;
         visibility: visible;
         z-index: 100;
     }
@@ -478,7 +471,7 @@ footer a:hover{
     }
 
     nav{
-        border-top: 3px solid #fd4908;
+        border-top: 3px solid #AA3911;
     }
 
     footer{
@@ -508,13 +501,12 @@ footer a:hover{
         display: none;
     }
 
-    nav i,span{
+    nav span{
         display: flex !important;
         justify-content: center;
+        font-size: 1.20rem;
     }
-    nav span{
-        padding-top: .5vh;
-    }
+
     
     .row {
         padding: 0 20px !important;
