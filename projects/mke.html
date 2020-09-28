@@ -54,18 +54,13 @@
                 <div class="col-sm-9 noPad">
                     <h2 class="projectHeader">Milwaukee: Segregated Isolation</h2>
                     <p>I was honored to receive the Hilldale Undergraduate Fellowship in 2019 to help fund research by Professor Song Gao
-                         and me investigating neighborhood isolation. The visualization is the alternative design seen in my paper published in the journal
-                         Environment and Planning A titled <a class="link" target="_blank" href="https://journals.sagepub.com/eprint/KM87MXW5YKSZCKQHM4CS/full">Understanding neighborhood isolation through spatial interaction network analysis using location big data</a>. The journal graphic is changed to a cartogram
-                         so the figure is more socially just and ethical.
+                         and me investigating neighborhood isolation. The visualization below is the the alternative design seen in my paper published in the journal
+                         Environment and Planning A titled <a class="link" target="_blank" href="https://journals.sagepub.com/eprint/KM87MXW5YKSZCKQHM4CS/full">Understanding neighborhood isolation through spatial interaction network analysis using location big data</a>. Please check out the publication since it is a 'featured graphic' that tells a narrative. 
 
                     </p>
                     <p>
-                            I collaborated with Yuhao Kang, Joe App, and Professor Song Gao on this project. I did the visualization, storytelling, and some data wrangling. 
-                            Accordingly, I wrote scripts to extract demographic and mobility data from our database. 
-                            Once I processed the data, I brought it into illustrator and tweaked transparency features until the flows rose to figure. 
-                            Yuhao managed the database of Safegraph data while Joe programmed the community detection model in R. Professor Song Gao
-                            helped us frame and develop the research methodology as he had the idea for the research subject. 
-                    </p>
+                        I collaborated with Yuhao Kang, Joe App, and Professor Song Gao on this project. I did the visualization, storytelling, and some data wrangling. Accordingly, I wrote Python and to extract demographic and mobility data from our database. I also helped write R coding scripts to perform community detection on our mobility network. Using some database functions, I then queried the data needed to create a set of linestrings in WKT format. I employed QGIS to visualize the data before bringing it into Adobe Illustrator. Playing around with the transparency types and levels was a fun challenge. I ended up having to manipulate the stroke width of the lines as well depending on the community. In addition to the flows, I created a set of donut charts to represent the demographic composition of the communities. Our team made the mistake of putting Hispanic in with five metrics of race with the Hispanic category representing people who identified as non-White for their race and Hispanic for their ethnicity. Unfortunately, the way we generated the data makes it extremely tedious to fix our error. I choose a set of colors in the donut chart that are color vision deficiency friendly. The community colors were also chosen to reduce overlap among colors that may cause problems with readers who have color vision deficiency. To aid in the interpretation of the map, communities 4, 5, and 7 have callouts that narrate what is going on. 
+                                        </p>
                     <p class="created"><i>Created using QGIS, R, Pandas, and Python</i></p>
  
                 </div>
