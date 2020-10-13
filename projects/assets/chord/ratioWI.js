@@ -194,7 +194,7 @@ function fade(opacity) {
 //Function: Highlight Specific Inner Chords
 function highlight(i,opacity) {
 	  d3.selectAll('path.chord')
-      .filter(function(d,f) { console.log(f); return f != i ==true })
+      .filter(function(d,f) { return f != i ==true })
       .transition()
 		  .style("stroke-opacity", opacity)
 		  .style("fill-opacity", opacity);
