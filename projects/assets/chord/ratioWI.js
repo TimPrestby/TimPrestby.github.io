@@ -45,7 +45,7 @@ svg
   .attr("class", function(d) {return "group " + NameProvider[d.index];})
 	.append('path')
     .style('fill', function(d,i){return colors[i]})
-		.style('stroke','gray')
+		.style('stroke','black')
 		.attr("d", d3.arc()
       .innerRadius(innerRadius)
       .outerRadius(outerRadius)
@@ -65,7 +65,7 @@ svg
     )
     .attr("class", function(d,i) { return "chord " + 'a' + i})
     .style("fill", function(d){ return(colors[d.source.index]) }) // colors depend on the source group. Change to target otherwise.
-		.style("stroke", "gray")
+		.style("stroke", "black")
     .style("opacity",'.6')
   
 	
