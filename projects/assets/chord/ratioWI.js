@@ -89,7 +89,7 @@ group
     .attr("transform", function(d) { return "rotate(" + (d.angle * 180 / Math.PI - 90) + ") translate(" + (innerRadius + 12) + ",0)"; })
   .append("line")              
     .attr("x2", 6)
-    .attr("stroke","gray")
+    .attr("stroke", "black")
 
 // Add the labels of a few ticks:
 group
