@@ -1,0 +1,51 @@
+
+
+  g text{
+    fill: white;
+  }
+
+  g line {
+    stroke:white
+  }
+  .infolabel {
+    position: absolute;
+    height: 50px;
+    min-width: 100px;
+    color: black;
+    background-color: white;
+    border: solid thin black;
+    padding: 5px 10px;
+    font-size: .75em;
+    top: -75px;
+    text-align: center;
+}
+
+.infolabel h1 {
+    margin: auto;
+    padding: 0;
+    display: inline-block;
+    line-height: 1em;
+    font-size: 1em;
+
+}
+
+
+.titles {
+  color: black !important;
+}
+
+.svg-container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 100%;
+  vertical-align: top;
+  overflow: hidden;
+}
+.svg-content {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

@@ -245,7 +245,7 @@ font-weight: normal;
 }
 
 .bold{
-    font-weight: bold;
+    font-weight: bold !important;
     letter-spacing: .05rem;
 }
 
