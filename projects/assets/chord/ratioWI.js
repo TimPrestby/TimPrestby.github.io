@@ -26,7 +26,7 @@ var svg = d3.select('#chordContainer')
     .attr("viewBox", "0 0 " + width + " " + height)
     .classed("svg-content", true)
     .append('g')
-    .attr('transform',"translate(" + (margin.left + width/2.5) + "," + (margin.top + height/4) + ")");
+    .attr('transform',"translate(" + (margin.left + width/2.25) + "," + (margin.top + height/4) + ")");
 
 //Give matrix to chord
 var chart = d3.chord()
@@ -141,7 +141,7 @@ function groupTicks(d, step) {
  //Function: create dynamic labels//
  function setLabel(source, target) {
 	//Create label content as HTML string
-	var labelAttribute = '<h1>' + 'Percent of total ' + NameProvider[source['index']] + ' neighborhood travels to ' + NameProvider[source['subindex']] + ' neighborhoods: <i>' + formatNumber(source['value']) + '</i></h1><br>' +'<h1>' + 'Percent of total ' + NameProvider[target['index']] + ' neighborhood travels to ' + NameProvider[target['subindex']] + ' neighborhoods: <i>' + formatNumber(target['value']) + '</i></h1>';
+	var labelAttribute = '<h1> Percent of total ' + NameProvider[source['index']] + ' to ' + NameProvider[source['subindex']] + ' neighborhood travels: <i>' + formatNumber(source['value']) + '</i></h1><br>' +'<h1>' + 'Percent of total ' + NameProvider[target['index']] + ' to ' + NameProvider[target['subindex']] + ' neighborhood travels: <i>' + formatNumber(target['value']) + '</i></h1>';
 	//Create detailed label in html page 
 	var infolabel = d3.select('body')
 			.append('div')
@@ -172,19 +172,12 @@ function moveLabel() {
         .width;
 
     //Use coordinates of mousemove event to set label coordinates with offsets from wherever event is
-    var x1 = d3.event.pageX + 10,
-        y1 = d3.event.pageY - 55,
-        x2 = d3.event.pageX - labelWidth - 10,
-        //Used to switch vertical sides
-        y2 = d3.event.pageY + 25;
-    //Test for overflow horizontally (If the event x coordinate is greater than the width of the window and label buffer)
-    var x = d3.event.pageX > window.innerWidth - labelWidth - 20 ? x2 : x1;
-    //Test for overflow vertically (Is the Y coordinate less than the distance between mouse and upper-left label)
-    var y = d3.event.pageY < 75 ? y2 : y1;
+    var x1 = d3.event.pageX - labelWidth/2,
+        y1 = d3.event.pageY - 55;
     //Select the infolabel currently mousing over
     d3.select(".infolabel")
-        .style("left", x + "px")
-        .style("top", y + "px");
+        .style("left", x1 + "px")
+        .style("top", y1 + "px");
 };
 
 //Function: Fade Groups of Chords by filtering chords that are being highlighted 
