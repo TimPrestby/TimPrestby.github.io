@@ -6,7 +6,7 @@
         <link rel="icon" type="image/png" sizes="32x32" href="../lib/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="../lib/favicon-16x16.png">
         <link rel="manifest" href="../lib/site.webmanifest">
-        <title>Groin Field</title>
+        <title>COVID-19 in Prisons</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -52,29 +52,49 @@
         <div class="contentContainer">
             <div class="row">
                 <div class="col-sm-9 noPad">
-                    <h2 class="projectHeader">Groin Field Impacts at Sheridan Park
+                    <h2 class="projectHeader">Correctional Facilities Were an Early and Lasting Vector for COVID-19 Behind and Beyond Bars
                     </h2>
+
+                   <a class='link' href="https://medium.com/@TimPrestby/correctional-facilities-were-an-early-and-lasting-vector-for-covid-19-behind-and-beyond-bars-27ac3191c263"> 
+                        <h3>
+                            Please check out this project on Medium! 
+                        </h3>
+                   </a>
+
+                   <h3> Below is the accompanying explainer behind the narrative: </h3>
+
                     <p> 
-                        As a kid, science was always my favorite subject. Particularly, I was drawn to the natural processes of climate, weather, and hydrology. My dreams of doing a mapping project rooted in Earth science came to fruition as I got involved with the UW Seagrant. I led the design of the storymap with a team of two civil/coastal engineers (Briana Shea, Adam Bechle) and a planner David Hart. The project was aimed to inform coastal planners and engineers about the deleterious effects of implementing coastal groin structures. My role in the project was to translate the ideas and knowledge of our storymap team into a coherent narrative. I created all the graphics in the story besides the splash page video of water. I also pieced together the story map with our myriad of text, photos, maps, graphics, and interactive pieces. The orthophotos were rectified and edited by me to ensure the spatial representation was accurate. I spent the most time creating the set of static and animated maps. The animated maps are gifs created by sequencing a set of images created in Adobe Illustrator.                    </p>
+                        My project, Correctional Facilities Were an Early and Lasting Vector for COVID-19 Behind and Beyond Bars, is the capstone to my independent study with Politico’s Interactive Team leader, Andrew McGill. I was able to apply everything I learned through this project, and then some. The main goal of the project was to convey that COVID-19 outbreaks in prison have far-reaching ramifications for the general public.                     </p>
                     <p>
-                        I began the process by reading a master’s thesis that a civil engineer wrote to document the short and long-term changes of our study area. Next, our team met to flush out key takeaways from the thesis. From there, I drafted a storyboard of the narrative with my team member Briana. Given the complexity of the story with two major areas of interest and three different timelines, we decided to dedicate an act to each timeline that covered both areas. The acts were all structured the same way starting with a header followed by a summary topic sentence outlining the major change in that time period. Each act then had two sections covering the changes per area consisting of a set of (animated) graphics supplemented with text followed by a before/after image slider showing historic orthophotos. The organization of these acts and their sub-components was the most challenging part of the process. Sketching and peer feedback were my best friend. Once we had the narrative laid out, I switched gears to design mode. I spent hours configuring ArcGIS Storymaps and more time in illustrator working on the graphics. I developed the graphics after many sketches and conversations with my team to visualize the coastal processes in an accurate yet simple way. 
+                        Using Google’s advanced search syntax, I found an interesting report done by the Prison Policy Initiative (PPI) that estimated the number of COVID-19 cases linked to correctional facilities. The data was unfortunately not in a nice, tidy spreadsheet, so I had to bring the data into excel myself. Then, I had to write a python script to perform a double join on the county and state columns to get a reliable key, the GEOID, a concatenation of the state and county FIPS codes per record. Once I had the GEOID, I created another python script to join the data to a county shapefile. 
+                    </p>
+                    <p>
+                        After that, I got to work in ArcGIS Pro and then Adobe Illustrator to craft a compelling map. Above all, I enjoyed making the legend which is also a histogram that shows the breakdown of counties per class. Thank you to Tim Meko and your old “Initial Income Eligibility Thresholds” map for the inspiration! Also, Tanya Andersen and Alicia Iverson were a huge help as I worked through the map, so thank you for your feedback and ideas! 
+                    </p>
+
+                    <p>
+                        The other major dataset I wrangled with was a large database of the New York Times COVID-19 cases data. I brought this data into SQLite and performed some queries to get a data table that had summed up all the cases per county from May 1-August 1. Next, I normalized the cases to create a caseload value per 100,000 residents to create a metric that is compatible with PPI’s estimated cases linked to incarceration. With these two variables, I created a split bar chart comparing the total cases a county experienced with the number estimated to be linked to incarceration according to PPI. 
+                    </p>
+
+                    <p>
+                        Besides these two graphics, I did a variety of data wrangling using pivot tables and simple excel filters to find out interesting values interspersed throughout the narrative. For instance, I calculated how many times more cases the top 1% of rural counties had compared to the bottom 99%. 
                     </p>
                         
-                    <p class="bold">Honorable Mention: 2020 CaGISDavid Woodward Digital Map Award<br>
+                    <p>
+                        The most rewarding part of the project was the writing. Getting to thread all the key points together into a cohesive narrative was a fun challenge. Likewise, I interviewed two experts, Dr. Crystal Watson, and Dr. Lauren Brinkley-Rubinstein, who gave my story emotion and character. I am extremely grateful for them taking time out of their busy lives to talk with me. 
+                    </p>
 
-                        <p class="created"><i>Created using ArcGIS StoryMaps</i></p>
+                    <p>
+                        Finally, I wish to give a huge thanks to my teacher, Andrew McGill. I learned more about data journalism from him in our one-on-one meetings and his course than I had in two years doing my own reading on the emerging field. 
+                    </p>
+                        
+                        <p class="created"><i>Created using SQLite, ArcGIS, Illustrator</i></p>
  
                 </div>
 
             </div>
             
-            <div class="row">
-                <div class="col-12 noPad">
-                    <div class="iframeContainer">
-                        <iframe width="100%" height="max-content" src="https://storymaps.arcgis.com/stories/bc2b8b4a5dd646109c426f25e61e4da7"></iframe>
-                    </div>
-                </div>
-            </div>
+           
 
     
  

@@ -231,6 +231,10 @@ font-weight: normal;
     color: white !important;
 }
 
+.padBot {
+    padding-bottom: 16px !important;
+}
+
 /*///////////////Project Pages///////////////*/
 .projectHeader{
     font-size: 3rem;
