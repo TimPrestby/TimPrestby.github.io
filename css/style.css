@@ -126,6 +126,10 @@ header{
     
     }
 
+    .cover {
+        display: block !important;
+    }
+
         }
 }
 
