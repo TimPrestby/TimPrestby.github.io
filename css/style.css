@@ -567,18 +567,30 @@ footer a:hover{
     }
 
     footer{
-        padding-bottom: 17.5vh;
+        padding-bottom: 10vh;
+        }
 
-    }
+    
 
     .navbar-nav{
-        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100vw;
+        height: 7.5vh;
+        padding-left: 8vw;
+        padding-right: 8vw;
         
     }
 
+
+    #navbarNavAltMarkup {
+        display: flex !important;
+        justify-content: space-between !important;
+    }
+
     .nav-link{
-        padding: 1rem 8.5vw 1rem 8.5vw !important;
-        width: 33.33vw;
+        padding:0 !important
     }
 
     .navbar{
