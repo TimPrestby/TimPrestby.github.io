@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--Name index so that when updating to server, it knows which is the main page of the site-->
+    <head>
+        <link rel="apple-touch-icon" sizes="180x180" href="../lib/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../lib/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../lib/favicon-16x16.png">
+        <link rel="manifest" href="../lib/site.webmanifest">
+        <title>Chesapeake</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/style.css">
+     <!--Fonts:-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Bitter&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    </head>
+
+<body>
+
+    <div class="mainContainer">
+        <header>
+            <nav class="navbar navbar-expand" id="intro">
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav" id="largerDevices">
+ <a class="nav-link" href="../index.html#anchor">Portfolio</a>
+                        <a class="nav-link" href="../research.html">Research</a>
+                        <a class="nav-link" href="../about.html">About</a>                    </div>
+                    <div class="brand">
+                        <h5>Timothy J. Prestby</h5>
+                    </div>
+                    <div class="navbar-nav" id="mobileDevices">
+                        <a class="nav-link" href="../index.html#anchor">
+                            <span>Portfolio</span>
+                        </a>
+                        <a class="nav-link" href="../about.html">
+                            <span>About</span>
+                        </a>
+                            <a class="nav-link" href="../research.html">
+                            <span>Research</span>
+                        </a>
+                    </div>
+                </div>     
+    
+            </nav>
+        </header>
+
+        <div class="contentContainer">
+            <div class="row">
+                <div class="col-sm-9 noPad">
+                    <h2 class="projectHeader">Placing Wetlands in the Watershed: Situating Millbrook Marsh, Pennsylvania in the Chesapeake Bay Watershed</h2>
+                    <p>This project aims to situate Millbrook Marsh, which contains 50 acres of protected wetlands, in the greater Spring Creek, Susquehanna, and Chesapeake Bay Watersheds. Specifically, we want to highlight how the myriad benefits that the Chesapeake Bay Watershed ecosystem provides for human wellbeing (ecosystem services) are a product of many smaller ecosystems and watersheds. We also sought to highlight that these services are not equally available to people because of ongoing environmental justice issues.  </p>
+                    <p>To accomplish these goals, I created a set of four maps at four different scales. Three maps correspond to three different watersheds: The Chesapeake Bay Watershed, The Susquehanna Watershed, and the Spring Creek Watershed. The final map visualizes Millbrook Marsh which is a part of all these watersheds but at the largest scale, is a part of the Spring Creek Watershed. The main dataset featured in each map is the National Wetlands Inventory, a high-resolution vector dataset showing the location and type of wetlands across the United States. I colored the wetlands according to the default categorical scheme used by the U.S. Fish and Wildlife Service.  </p>
+                    <p>The wetlands data layer is the only thematic data layer in the Chesapeake Bay Watershed map to ensure that the vastness and mosaic of wetlands are captured. The Susquehanna Watershed map also features an environmental justice (EJ) layer that shows where communities facing environmental justice issues are located. These data come from the Pennsylvania Department of Environmental Protection, and the designation of an EJ is based on over 30 indicators. The EJ areas are visualized with an orange semi-transparent fill so that readers can still see the underlying basemap and wetlands data. The Spring Creek Watershed map features a different EJ data layer that shows the percent of people living in a municipality that have access to outdoor recreation areas within a ten-minute walk. This dataset was created by The Pennsylvania Department of Conservation and Natural Resources in 2020. Finally, the map of Millbrook Marsh highlights key features of the nature center including boardwalks, buildings, and major vegetation types. These data were acquired from Open Street Maps and surveying contractors working with Millbrook Marsh. The basemap was designed from scratch using data from Natural Earth and the National Hydrography Dataset.  </p>
+                   <p>Each map has a unique color that the map’s overall aesthetic is based on. For instance, The Chesapeake Bay Watershed map has a pink title, and the boundary of the watershed is also colored pink. Smaller scale maps show the nested watersheds within (e.g., the boundaries of the Susquehanna and Spring Creek Watersheds are visible in the Chesapeake Bay map).  </p>
+                    <p>I created the maps using ArcGIS Pro and Adobe Illustrator. I first merged all the wetland data from eight different states into a single layer. Next, I filtered the data to remove features that were too small to be seen. I applied different filter parameters depending on the scale of the map. I symbolized the river data using the ‘visibility filter’ attribute which was developed by the U.S. Geological Survey to help cartographers determine which rivers should be shown at a particular scale. I applied a simplification and smoothing processing tool on the various boundaries, rivers, wetland features to generalize the maps. After completing all the necessary geoprocessing, I exported the document to Adobe Illustrator to clean up the design. Specifically, I tweaked the colors to be suitable for print, designed textures for the Millbrook Marsh map, and added curved labels for rivers. </p>
+                    <p>I was able to make the maps thanks to extensive feedback from Trevor Birkenholtz and Lily Houtman. Both were instrumental to the outcome of this set of maps.  </p>
+                    
+                    <p class="created"><i>Created using ArcGIS and Illustrator</i></p>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-12 noPad">
+                    <img src="assets/chesapeake/poster_millbrook-01.png" class="projectImg">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column" id="colLeft">
+
+                    <div class="item">
+                        <img src="assets/chesapeake/Chesapeake.png" class="projectImg">
+
+                    </div>
+
+                    <div class="item">
+                        <img src="assets/chesapeake/Susquehanna.png" class="projectImg">
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="column" id="colRight">
+
+                    <div class="item">
+                        <img src="assets/chesapeake/Spring Creek.png" class="projectImg">
+
+                    </div>
+
+                    <div class="item">
+                        <img src="assets/chesapeake/Millbrook.png" class="projectImg">
+
+                    </div>
+
+                </div>
+            </div>
+
+ 
+
+
+    
+
+ 
+
+            <div class="filler">
+            </div>
+
+            
+
+
+
+        
+        <!-- // Footer & contact info -->
+        <footer>
+
+                <!-- Social media and contact links. Add or remove any networks. -->
+                <div class="text-center" role="contentinfo">
+                
+                    <a href="https://twitter.com/TimPrestby" target="_blank"><i class="fab fa-twitter fa-2x"></i><span class='sr-only'>Twitter</span></a>
+                    <a href="https://www.linkedin.com/in/TimPrestby" target="_blank"><i class="fab fa-linkedin-in fa-2x"></i><span class='sr-only'>Linkedin</span></a>
+                    <a href="https://github.com/TimPrestby" target="_blank"> <i class="fab fa-github fa-2x"></i><span class='sr-only'>GitHub</span></a>
+                <a href="https://www.researchgate.net/profile/Timothy_Prestby" target="_blank"><i class="fab fa-researchgate fa-2x"></i><span class='sr-only'>Researchgate</span></a>
+                <p>I created and maintain timprestby.github.io myself.</p>
+                <p><i class="fas fa-copyright"></i></i><span class='sr-only'></span> 2024 Timothy J. Prestby</p>
+            </div>
+                <!--because this is a div, the entire thing is treated as a block with individual inline objects as the links-->
+                
+            
+            </footer>
+        </div>
+        <script type="text/javascript" src="../js/jquery.slim.js"></script>
+        <script type="text/javascript" src="../js/scrollMonitor.js"></script>
+        <script type="text/javascript" src="../js/main.js"></script>
+    
+    </body>
+    </html>

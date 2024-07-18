@@ -11,6 +11,16 @@ p, h5 {
 }
 
 
+footer {
+    border-top: 3px solid #AA3911;
+padding-top: 10px;
+}
+
+#welcome {
+    padding-bottom: 10vh;
+    text-align: center;
+}
+
 
 
 /*/////////////////// Nav Styles ///////////////////*/
@@ -400,7 +410,7 @@ iframe{
 /*///////////////FOOTER///////////////*/
 
 footer p{
-    margin-top: 3vh;
+    margin-top: 1vh;
     padding-top: 0px;
     margin-bottom:0px;
 }
@@ -520,6 +530,8 @@ footer a:hover{
 }
 
 @media (max-width:767px){
+
+
     .column {
         flex: 100%;
         max-width: 100%;
@@ -556,6 +568,7 @@ footer a:hover{
 
     footer{
         padding-bottom: 17.5vh;
+
     }
 
     .navbar-nav{
