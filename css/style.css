@@ -12,7 +12,7 @@ p, h5 {
 
 
 footer {
-    border-top: 3px solid #AA3911;
+    border-top: 3px solid #6ef7b5;
 padding-top: 10px;
 }
 
@@ -34,10 +34,10 @@ nav{
     padding-left: 0 !important;
 }
 .nav-link:hover{
-    color: #AA3911;
+    color: #6ef7b5;
 }
 .active{
-    color: #AA3911;
+    color: #6ef7b5;
 }
 .active:hover{
     color:white;
@@ -81,6 +81,15 @@ header{
 
 
 /*///////////////Portfolio///////////////*/
+.topContainer {
+    margin-left: 20vw;
+    margin-right: 20vw;
+}
+
+.topContainer em {
+    color: #6ef7b5;
+font-weight: bold;}
+
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -208,7 +217,7 @@ header{
     margin: 25px 0 25px 0;
     width: 300px;
     height: 4px;
-    background: #AA3911;
+    background: #6ef7b5;
     animation: smoothLeft 1s;
     z-index: -100 !important;
 }
@@ -255,7 +264,7 @@ font-weight: normal;
 }
 
 .link{
-    color: #AA3911;
+    color: #6ef7b5;
 }
 
 .link:hover{
@@ -305,8 +314,7 @@ iframe{
 
 /*///////////////GLOBAL CLASSES/ID///////////////*/
 
-.mainContainer{
-}
+
 
 .filler{
     height: 7.5vh;
@@ -425,7 +433,7 @@ footer a{
 }
 
 footer a:hover{
-    color: #AA3911;
+    color: #6ef7b5;
 }
 
 
@@ -434,8 +442,8 @@ footer a:hover{
 @media (min-width:1200px) {
 
     .contentContainer{
-        margin-left: 16.66vw;
-        margin-right: 16.66vw;
+        margin-left: 15vw;
+        margin-right: 15vw;
     }
 
     .navbar-nav{
@@ -450,7 +458,7 @@ footer a:hover{
     }
 
     nav{
-        border-bottom: 3px solid #AA3911;
+        border-bottom: 3px solid #6ef7b5;
         height: 5vh;
     }
 
@@ -488,6 +496,11 @@ footer a:hover{
         margin-right: 4.66vw;
     }
 
+.topContainer {
+    margin-left: 7vw;
+    margin-right: 7vw;
+}
+
     .brand{
         right: 4.66vw;
         position: absolute;
@@ -505,7 +518,7 @@ footer a:hover{
     }
 
     nav{
-        border-bottom: 3px solid #AA3911;
+        border-bottom: 3px solid #6ef7b5;
         height: 5vh;
     }
 
@@ -563,7 +576,7 @@ footer a:hover{
     }
 
     nav{
-        border-top: 3px solid #AA3911;
+        border-top: 3px solid #6ef7b5;
     }
 
     footer{
@@ -656,7 +669,14 @@ footer a:hover{
     .col-md-6{
         padding: 0 !important;
     }
+
+    .topContainer {
+    margin-left: 0px;
+    margin-right: 0px;
+}
     
+.topContainer h1 {
+}
   
     
 
