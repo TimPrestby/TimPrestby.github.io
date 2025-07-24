@@ -21,6 +21,9 @@ padding-top: 10px;
     text-align: center;
 }
 
+#courseDescriptions, #teachingApproaches {
+    padding-top: 50px;
+}
 
 
 /*/////////////////// Nav Styles ///////////////////*/
@@ -70,6 +73,11 @@ header{
 
 }
 
+h5 {
+        font-family: 'Ubuntu', sans-serif !important;
+
+}
+
 .navbar-nav{
     position: relative !important;
 }
@@ -87,7 +95,7 @@ header{
 }
 
 .topContainer em {
-    color: #6ef7b5;
+    color: #e92acc;
 font-weight: bold;}
 
 .row {
@@ -314,7 +322,17 @@ iframe{
 
 /*///////////////GLOBAL CLASSES/ID///////////////*/
 
+.teaching b {
+color: #e92acc;
+margin-bottom: 0;
 
+}
+
+.teachImg {
+    max-width: 50vw;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 
 .filler{
     height: 7.5vh;
@@ -544,6 +562,14 @@ footer a:hover{
 
 @media (max-width:767px){
 
+
+    .teachImg {
+    max-width: 100%;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 
     .column {
         flex: 100%;
