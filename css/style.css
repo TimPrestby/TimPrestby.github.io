@@ -283,6 +283,10 @@ font-weight: normal;
     padding-bottom: 16px !important;
 }
 
+.research h5{
+    text-align: center !important;
+}
+
 /*///////////////Project Pages///////////////*/
 .projectHeader{
     font-size: 3rem;
