@@ -95,8 +95,26 @@ h5 {
 }
 
 .topContainer em {
-    color: #e92acc;
+    color: #f76eb0;
 font-weight: bold;}
+
+.topContainer b {
+    color: #f76eb0;
+}
+
+.portfolioHeader{
+      text-align: center;
+}
+
+.portfolioBar{
+    margin: 0 auto;
+    width: 300px;
+    height: 4px;
+    background: #6ef7b5;
+    animation: smoothLeft 1s;
+    z-index: -100 !important;
+
+}
 
 .row {
     display: flex;
@@ -283,7 +301,7 @@ font-weight: normal;
     padding-bottom: 16px !important;
 }
 
-.research h5{
+.research h3{
     text-align: center !important;
 }
 
